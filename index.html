@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Pesto</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-light"></div>
+        <div class="navbar">
+            <div class="navbar__light">
+                <div class="navbar__toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </div>
+            </div>
+            <div class="navbar__pesto-logo light"></div>
+            <div class="navbar__items">
+                <ul class="navbar-nav">
+                    <li class="navbar__nav-item color-fix">
+                        <a class="navbar__nav-link link-fix-color" href="#">Home</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a class="navbar__nav-link" href="#">About</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a class="navbar__nav-link" href="#">Typography</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a class="navbar__nav-link" href="#">Contacts</a>
+                    </li>
+                    <div class="navbar__btn right"><span>Book&nbsp;now</span></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="section">
+            <div id="availabiliti">
+                <div class="availabiliti__header">
+                    <h1>Welcome</h1>
+                    <hr>
+                    <p>Our restaurant offers full-service dining with breathtaking views<br>seen from our indoor covered patio and our outdoor sundeck.</p>
+                </div>
+                <div id="background__anim">
+                    <div id="background__anim_rotate"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="employee">
+                <div class="availabiliti__container">
+                    <div class="availabiliti__box">
+                        <div class="availabiliti__box-item">
+                            <label for="taskName">Name</label>
+                            <input type="text" id="taskName" value="Your name" autocomplete="on">
+                            <div class="message__input" id='errName'>The&nbsp;text&nbsp;field&nbsp;is&nbsp;required</div>
+                        </div>
+                        <div class="availabiliti__box-item">
+                            <label for="taskPhone">Phone</label>
+                            <input type="text" id="taskPhone" value="Your phone number" autocomplete="on">
+                            <div class="message__input" id='errPhone'>Only&nbsp;numbers&nbsp;are&nbsp;required</div>
+                        </div>
+                        <div class="availabiliti__box-item">
+                            <label for="taskDate">Date</label>
+                            <input type="text" id="taskDate" class="datepicker" name="date" value="01.01.2019"><span class="icon-date"></span>
+                        </div>
+                        <div class="availabiliti__box-item no-right-border">
+                            <label for="list">No.&nbsp;of&nbsp;people</label>
+                            <select id="list" idrequired>
+                                <option>1</option>
+                                <option selected="selected">2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                            </select>
+                            <span class=".icon-arrow"></span>
+                        </div>
+                        <div class="check-btn">Check&nbsp;availability</div>
+                    </div>
+                </div>
+                <div class="employee__background">
+                    <div class="employee__img"></div>
+                </div>
+                <div class="employee__about-box">
+                    <h2>About&nbsp;Us</h2>
+                    <p>Pesto is a family owned and operated Italian Restaurant offering a combination of fresh ingredients and authentic Italian cooking.</p>
+                    <p>We will make sure you are served the most authentic and fresh Italian dishes, while offering the best customer service. Our kitchen is committed to providing our guests with the best Italian Cuisine.</p>
+                    <div class="employee__autograph"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="foods">
+                <div class="block-white"></div>
+                <div class="foods__featured">
+                    <h2>Featured&nbsp;Offers</h2>
+                    <p>We offer a great variety of the best Italian dishes to our visitors and guests. Below are some of our most popular main dishes and desserts.</p>
+                </div>
+                <div class="foods__box">
+                    <div class="box__block">
+                        <div class="img__ravioli">
+                            <div class="btn__order">Order&nbsp;now</div>
+                        </div>
+                        <h3>Ravioli</h3>
+                        <p>$8</p>
+                    </div>
+                    <div class="box__block box-distance">
+                        <div class="img__pasta">
+                            <div class="btn__order">Order&nbsp;now</div>
+                        </div>
+                        <h3>Black&nbsp;Pasta</h3>
+                        <p>$13</p>
+                    </div>
+                    <div class="box__block">
+                        <div class="img__gelato">
+                            <div class="btn__order">Order&nbsp;now</div>
+                        </div>
+                        <h3>Gelato</h3>
+                        <p>$4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="menu">
+                <h2>Our&nbsp;Restaurant&nbsp;Menu</h2>
+                <div class="menu__container">
+                    <ul class="container__header">
+                        <li class="header__item"><a href="#tab__menu-1">mains</a>
+                        </li>
+                        <li class="header__item"><a href="#tab__menu-2">desserts</a>
+                        </li>
+                        <li class="header__item"><a href="#tab__menu-3">drinks</a>
+                        </li>
+                    </ul>
+                    <div class="container__tabs">
+                        <div id="tab__menu-1">
+                            <div class="menu__box">
+                                <p class="cost">$25.89</p>
+                                <h4><a href="#">Osso Buco</a></h4>
+                                <p>Osso Buco is one of the Italian greats - slow cooked veal in a white wine tomato sauce. Meltingly tender, this is both hearty and luxurious.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost"> $16.89</p>
+                                <h4><a href="#">Pappardelle Mimmo</a></h4>
+                                <p>This delicious dish tops long, wide pasta with scallops, lobster, asparagus, butter, sage and truffle oil to cater every palate.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost">$17.89</p>
+                                <h4><a href="#">Trippa Satriano</a></h4>
+                                <p>Thinly sliced herb encrusted ahi tuna topped with diced tomatoes, olives, capers, red onions and fennel. Perfect choice even for the first-time visitors!</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost">$18.89</p>
+                                <h4><a href="#">Filetto Di Manzo</a></h4>
+                                <p>Wonderful combination of prime tenderloin, winter greens, Jerusalem artichoke puree, and oxtail reduction sauce.</p>
+                            </div>
+                        </div>
+                        <div id="tab__menu-2">
+                            <div class="menu__box">
+                                <p class="cost">$20.89</p>
+                                <h4><a href="#">Tiramisu</a></h4>
+                                <p>A Pesto’s favorite - classic Italian dessert made with lady fingers, Mascarpone cheese & espresso. Perfect for both kids and adults.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost"> $6.89</p>
+                                <h4><a href="#">Cannoli</a></h4>
+                                <p>Trio tower of cannoli filled with smooth ricotta, sugar & cinnamon, with chocolate & raspberry sauces. Single cannoli is also available.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost">$5.89</p>
+                                <h4><a href="#">Pistachio Passion</a></h4>
+                                <p>Layered pistachio cream, cream cheese custard & whipped cream atop a rich walnut crust.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost">$4.89</p>
+                                <h4><a href="#">Chocolate-and-Pistachio Biscotti</a></h4>
+                                <p>At Pesto, we vary these wonderful nutty biscotti, while also dipping them in melted dark chocolate for an extra layer of flavor.</p>
+                            </div>
+                        </div>
+                        <div id="tab__menu-3">
+                            <div class="menu__box">
+                                <p class="cost">$25.89</p>
+                                <h4><a href="#">Osso Buco</a></h4>
+                                <p>Osso Buco is one of the Italian greats - slow cooked veal in a white wine tomato sauce. Meltingly tender, this is both hearty and luxurious.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost"> $16.89</p>
+                                <h4><a href="#">Pappardelle Mimmo</a></h4>
+                                <p>This delicious dish tops long, wide pasta with scallops, lobster, asparagus, butter, sage and truffle oil to cater every palate.</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost">$17.89</p>
+                                <h4><a href="#">Trippa Satriano</a></h4>
+                                <p>Thinly sliced herb encrusted ahi tuna topped with diced tomatoes, olives, capers, red onions and fennel. Perfect choice even for the first-time visitors!</p>
+                            </div>
+                            <div class="menu__box">
+                                <p class="cost">$18.89</p>
+                                <h4><a href="#">Filetto Di Manzo</a></h4>
+                                <p>Wonderful combination of prime tenderloin, winter greens, Jerusalem artichoke puree, and oxtail reduction sauce.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="gallery">
+                <div id="gallary__top">
+                    <div class="top__columns">
+                        <div class="top__item">
+                            <div class="item__zoom">
+                                <div class="item__zoom_out"></div>
+                                <div class="item__zoom_in" id="1">zoom</div>
+                            </div>
+                        </div>
+                        <div class="top__item">
+                            <div class="item__zoom">
+                                <div class="item__zoom_out"></div>
+                                <div class="item__zoom_in" id="2">zoom</div>
+                            </div>
+                        </div>
+                        <div class="top__item">
+                            <div class="item__zoom">
+                                <div class="item__zoom_out"></div>
+                                <div class="item__zoom_in" id="3">zoom</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gallary__bottom">
+                    <div class="bottom__columns">
+                        <div class="bottom__item">
+                            <div class="item__zoom">
+                                <div class="item__zoom_out"></div>
+                                <div class="item__zoom_in" id="4">zoom</div>
+                            </div>
+                        </div>
+                        <div class="bottom__item">
+                            <div class="item__zoom">
+                                <div class="item__zoom_out"></div>
+                                <div class="item__zoom_in" id="5">zoom</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="slider">
+                <h2>Recent&nbsp;News</h2>
+                <div class="slider__viewport">
+                    <ul class="slider__wrapper">
+                        <li class="slide">
+                            <div class="slide__box">
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>JUL 02, 2019</a></div>
+                                    <h4><a href='#'>Genuine Italian Pizza: Authenticity and Choice</a></h4>
+                                    <p>As an Italian restaurant, we are very proud of our delicious authentic pizzas. Our three most popular choices are the Rustica, the Toscana and...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>JUL 12, 2019</a></div>
+                                    <h4><a href='#'>Italian vs. American Spaghetti: Top 5 Differences</a></h4>
+                                    <p>Commonly, when we hear there is spaghetti for dinner we will be expecting a red tomato sauce with meat and seasonings poured over long...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>AUG 02, 2019</a></div>
+                                    <h4><a href='#'>The Delicious History of Lasagna and Its Origins</a></h4>
+                                    <p>Lasagna, could there be a more perfect dish? It’s comfort food on steroids. Layers of cheese generously piled on top of decadent amounts...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="slide__box">
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>AUG 15, 2019</a></div>
+                                    <h4><a href='#'>Making Gelato Like a True Italian: Tips From Our Chef</a></h4>
+                                    <p>Most would agree that gelato is the most delicious frozen dessert; the perfect ending to any meal. With origins in Sicily, gelato has been made famous...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>SEP 15, 2019</a></div>
+                                    <h4><a href='#'>Italian Ingredients You Can Easily Grow at Home</a></h4>
+                                    <p>Imagine preparing an Italian dinner but having to stop cooking because you forget an ingredient and must run to the store. How nice would it be to go...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>SEP 28, 2019</a></div>
+                                    <h4><a href='#'>Our Brief Guide to Pairing Wine and Pasta the Right Way</a></h4>
+                                    <p>To Italians, pasta is the food of the gods, and there is nothing better to go with a good pasta than a perfect wine. To the uninitiated, finding the right...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="slide__box">
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>OCT 05, 2019</a></div>
+                                    <h4><a href='#'>Top 10 Famous Spring Dishes in Italian Restaurants</a></h4>
+                                    <p>As an Italian restaurant, we proud of delicious authentic pizzas. Our three most popular choices are the Rustica, the Toscana and...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>OCT 17, 2019</a></div>
+                                    <h4><a href='#'>What Makes Some Seasonings Truly Italian?</a></h4>
+                                    <p>Commonly, when we hear there is spaghetti for dinner we will be expecting a red tomato sauce with meat and seasonings poured over long...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="box__news">
+                                    <div class="news__date"><a href='#'>NOV 10, 2019</a></div>
+                                    <h4><a href='#'>Types of Italian Sausage and Why They Are Different</a></h4>
+                                    <p>Lasagna, could there be a more perfect dish? It’s comfort food on steroids. Layers of cheese generously piled on top of decadent amounts...</p>
+                                    <div class="read__more">
+                                        <a href='#'>Read more<span class="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav__btns">
+                        <li class="nav__btn_slide"></li>
+                        <li class="nav__btn_slide"></li>
+                        <li class="nav__btn_slide"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="footer">
+                <div>
+                    <div class="logo__pesto-img"></div>
+                    <ul class="footer__nav-items">
+                        <li class="footer__nav-item"><a class="footer__nav-link" href="#">menu</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link" href="#">blog</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link" href="#">contacts</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link" href="#">gallery</a></li>
+                        <li class="footer__nav-item no__border-right"><a class="footer__nav-link" href="#">about</a></li>
+                    </ul>
+                    <ul class="footer__social-items">
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <div class="logo__facebook-img"></div>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <div class="logo__instagram-img"></div>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <div class="logo__twitter-img"></div>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <div class="logo__youtube-img"></div>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <div class="logo__pinterest-img"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>© 2019 Pesto. All Rights Reserved. Privacy Policy. Design by Templatemonster</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="back">
+        <a href='#availabiliti'>
+            <div class='arrow-back'></div>
+        </a>
+    </div>
+    <div id="gallery__slider">
+        <div class="slider__header">
+            <div class="label__count"></div>
+            <button class="btn__zoom-out"></button>
+            <button class="btn__zoom-in"></button>
+            <div class="btn__exit"></div>
+        </div>
+        <div class="btn__prev"><span class='img_prev'></span></div>
+        <div class="slider__preview">
+            <div class="image__preview"></div>
+        </div>
+        <div class="btn__next"><span class='img_next'></span></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/jQuery-Timepicker-Addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+    <script src="script/main.js" type="text/javascript"></script>
+</body>
+
+</html>
