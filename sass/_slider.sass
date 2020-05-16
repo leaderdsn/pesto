@@ -7,163 +7,192 @@
     display: block
     width: 1200px
     margin: 0 auto
-    h2  
-        font-size: 3.1em
-        font-family: "pt serif", times new roman, Times, serif
-        font-weight: bold
-        color: #151515
-        letter-spacing: 0
-        text-align: center
-        
-    .slider__viewport
-        margin-top: 65px
-        width: 100%
-        display: block
+    margin-top: 5px
+    padding-left: 15px
+    padding-right: 15px
+    border: 1px solid red
+    .slider__container
         position: relative
-        overflow: hidden
-        -webkit-user-select: none
-        -moz-user-select: none
-        -ms-user-select: none
-        -o-user-select: none
-        user-select: none
-        height: auto
-
-        .slider__wrapper
-            position: relative
-            width: calc(100% * 4)
-            top: 0
-            left: 0
-            margin: 0px 0px 360px 0px
-            padding: 0
-            -webkit-transition: 1s
-            -o-transition: 1s
-            transition: 1s
-            -webkit-transition-timing-function: ease-in-out
-            -o-transition-timing-function: ease-in-out
-            transition-timing-function: ease-in-out
-            /*ul
-                margin: 0
-                padding: 0*/
-            .slide
-                width: calc(100%/4)
-                list-style: none
-                display: inline
-                float: left
-                margin: 0
-                padding: 0
-                .slide__box
-                    width: 100%
-                    display: flex
-                    justify-content: space-between
-                    flex-wrap: nowrap
-                    .box__news
-                        width: 400px
-                        height: auto
-                        display: block
-                        text-align: left
-                        margin: 0 5px 0 5px
-                        .news__date
-                            background-color: #323232
-                            color: #ffffff !important
-                            text-align: center
-                            padding: 3px 3px
-                            display: flexbox
-                            font-family: PoppinsRegular
-                            font-size: 0.9em
-                            text-transform: uppercase
-                            font-weight: bold
-                            width: 110px
-                            border-radius: 3px
-                            margin-bottom: 10px
-                            transition: 0.5s
-                            a
-                                color: #ffffff
-                                text-decoration: none
-                                transition: 0.5s
-                            &:hover
-                                background-color: #41a451
-                                transition: 0.5s
-                            
-                        h4
-                            font-family: "Pt serif", 'times new roman', Times, serif
-                            font-size: 1.7em
-                            color: #151515
-                            font-weight: normal
-                            text-align: left
-                            display: flexbox
-                            float: bottom
-                            margin-bottom: 15px
-                            transition: 0.5s
-                            a
-                                color: #151515
-                                text-decoration: none
-                                transition: 0.5s
-                                &:hover
-                                    color: #41a451
-                                    transition: 0.5s
-
-                        p
-                            color: #848484
-                            font-size: 0.9em
-                            font-family: PoppinsLight
-                            margin-bottom: 10px
-
-                        .read__more
-                            margin-top: 10px
-                            position: relative
-                            width: 220px
-                            font-family: PoppinsRegular
-                            color: #313131
-                            font-size: 1.1em
-                            display: inline-flex
-                            padding: 5px
-                            transition: 0.5s
-                            a
-                                text-decoration: none
-                                color: #313131
-                                transition: 0.5s
-                                &:hover
-                                    color: #41a451
-                                    transition: 0.5s
-                            &:hover .arrow-right
-                                background-image: url(../img/png/right-arrow-green.png)
-                                transition: 0.5s
-
-                            .arrow-right
-                                transition: 0.5s
-                                position: relative
-                                width: 25px
-                                height: 7px
-                                background-image: url(../img/png/right-arrow.png)
-                                background-size: contain
-                                background-repeat: no-repeat
-                                display: inline-flex
-                                margin-left: 10px
-                                margin-top: 5px
-                                padding-top: 5px
-
-        .nav__btns
+        width: 1170px
+        border: 1px solid purple
+        height: 100%
+        max-height: 500px
+        left: 0px
+        right: 0px
+        margin: 0 auto
+        display: block
+        .block-white
+            border: 1px solid black
+            position: absolute
+            top: 0px
             width: 100%
-            padding: 0
-            margin: 0px 0px 0px 0px
+            height: 100px
+            background-color: #ffffff
+            z-index: 2 
+            //background-color: red
+        .slider__header 
+            border: 1px solid black
+            position: absolute
+            top: -100px
+            left: 0px
+            right: 0px
+            bottom: 0px
+            width: 750px
+            height: 100px
             text-align: center
-            z-index: 1
-            .nav__btn_slide
+            margin: 0 auto
+            display: block
+            line-height: 100px
+            z-index: 1 
+            //background-color: green
+            h2  
+                font-size: 3.1em
+                font-family: "pt serif", times new roman, Times, serif
+                font-weight: bold
+                color: #151515
+                letter-spacing: 0
+                text-align: center
+        .slider__viewport
+            //position: relative
+            margin-top: 265px
+            width: 100%
+            display: block
+            position: relative
+            overflow: hidden
+            -webkit-user-select: none
+            -moz-user-select: none
+            -ms-user-select: none
+            -o-user-select: none
+            user-select: none
+            height: auto
+            .slider__wrapper
                 position: relative
-                display: inline-block
-                list-style: none
-                width: 13px
-                height: 13px
-                background-color: #c4c4c4
-                border-radius: 50%
-                margin: 0px 13px
-                transition: 0.5s
-                &:hover
+                width: calc(100% * 4)
+                top: 500px
+                left: 0
+                margin: 0px 0px 360px 0px
+                padding: 0
+                -webkit-transition: 1s
+                -o-transition: 1s
+                transition: 1s
+                -webkit-transition-timing-function: ease-in-out
+                -o-transition-timing-function: ease-in-out
+                transition-timing-function: ease-in-out
+                .slide
+                    width: calc(100%/4)
+                    list-style: none
+                    display: inline
+                    float: left
+                    margin: 0
+                    padding: 0
+                    .slide__box
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+                        flex-wrap: nowrap
+                        .box__news
+                            width: 400px
+                            height: auto
+                            display: block
+                            text-align: left
+                            margin: 0 5px 0 5px
+                            .news__date
+                                background-color: #323232
+                                color: #ffffff !important
+                                text-align: center
+                                padding: 3px 3px
+                                display: flexbox
+                                font-family: PoppinsRegular
+                                font-size: 0.9em
+                                text-transform: uppercase
+                                font-weight: bold
+                                width: 110px
+                                border-radius: 3px
+                                margin-bottom: 10px
+                                transition: 0.5s
+                                a
+                                    color: #ffffff
+                                    text-decoration: none
+                                    transition: 0.5s
+                                &:hover
+                                    background-color: #41a451
+                                    transition: 0.5s
+                            h4
+                                font-family: "Pt serif", 'times new roman', Times, serif
+                                font-size: 1.7em
+                                color: #151515
+                                font-weight: normal
+                                text-align: left
+                                display: flexbox
+                                float: bottom
+                                margin-bottom: 15px
+                                transition: 0.5s
+                                a
+                                    color: #151515
+                                    text-decoration: none
+                                    transition: 0.5s
+                                    &:hover
+                                        color: #41a451
+                                        transition: 0.5s
+                            p
+                                color: #848484
+                                font-size: 0.9em
+                                font-family: PoppinsLight
+                                margin-bottom: 10px
+                            .read__more
+                                margin-top: 10px
+                                position: relative
+                                width: 220px
+                                font-family: PoppinsRegular
+                                color: #313131
+                                font-size: 1.1em
+                                display: inline-flex
+                                padding: 5px
+                                transition: 0.5s
+                                a
+                                    text-decoration: none
+                                    color: #313131
+                                    transition: 0.5s
+                                    &:hover
+                                        color: #41a451
+                                        transition: 0.5s
+                                &:hover .arrow-right
+                                    background-image: url(../img/png/right-arrow-green.png)
+                                    transition: 0.5s
+                                .arrow-right
+                                    transition: 0.5s
+                                    position: relative
+                                    width: 25px
+                                    height: 7px
+                                    background-image: url(../img/png/right-arrow.png)
+                                    background-size: contain
+                                    background-repeat: no-repeat
+                                    display: inline-flex
+                                    margin-left: 10px
+                                    margin-top: 5px
+                                    padding-top: 5px
+            .nav__btns
+                width: 100%
+                padding: 0
+                margin: 0px 0px 0px 0px
+                text-align: center
+                z-index: 1
+                .nav__btn_slide
+                    position: relative
+                    display: inline-block
+                    list-style: none
+                    width: 13px
+                    height: 13px
+                    background-color: #c4c4c4
+                    border-radius: 50%
+                    margin: 0px 13px
                     transition: 0.5s
-                    cursor: pointer
-                    background-color: #409c4f
-   
+                    &:hover
+                        transition: 0.5s
+                        cursor: pointer
+                        background-color: #409c4f
     
+        
 
 
-                            
+                                

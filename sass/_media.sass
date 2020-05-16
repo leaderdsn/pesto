@@ -3,8 +3,11 @@
     #header
         width: 1200px
         height: 120px
+        .navbar-custom
+            width: 1200px
+            height: 120px
     
-    #availabiliti
+    #greeting
         width: 1200px
         height: 100vh
         #background__anim
@@ -12,69 +15,69 @@
                 max-width: 1200px   
                 animation-duration: 0s
                 animation-name: none
-        .availabiliti__header
+        .greeting__header
+            width: 660px
+            height: 250px
             h1
-                font-size: 2.0em
+                font-size: 2.9em
                 margin-bottom: 35px
             p
+                font-size: 1.3em
                 margin-top: 65px
             hr
-                left: 250px
+                left: 300px
+
+    #availability
+        width: 1170px
+        .availabiliti__container
+                top: -75px
+                width: 1140px
+                max-height: 57px
+                padding: 46px 20px 46px 20px
+                .availabiliti__box
+                    .availabiliti__box-item
+                        // height: 80px
+                        // padding-right: 15px 
+                        // margin-right: 20px
+                        // margin-bottom: 0px
+                        // float: left
+                        .message__input
+                            margin-top: -2px
+                        label
+                            margin-top: 5px
+                            margin-bottom: 0px
+                        input
+                            font-size: 1.2em
+                            margin-top: 5px
+                        #taskName
+                            width: 160px
+                        #taskPhone
+                            width: 180px
+                        #taskDate
+                            width: 130px
+                        .icon-date 
+                            bottom: 20px
+                            right: 20px
+                            width: 17px
+                            height: 17px
+                        .datepicker
+                            width: 130px
+                            height: 45px
+                            padding-bottom: 5px
+                            margin-bottom: 10px
+                        select
+                            font-size: 1.2em
+                            margin-top: 5px
+                    .check-btn
+                        margin-top: 15px
+                        margin-left: 13px
+                        width: 125px
+                        height: 50px
+                        font-size: 0.8em
+                        line-height: 50px
 
     #employee
         width: 950px
-        .availabiliti__container
-            top: -75px
-            width: 910px
-            max-height: 57px
-            padding: 46px 20px 46px 20px
-            .availabiliti__box
-                position: absolute
-                top: 35px
-                left: 20px
-                right: 20px
-                margin: auto auto
-                line-height: -10px
-                .availabiliti__box-item
-                    height: 80px
-                    padding-right: 15px 
-                    margin-right: 20px
-                    margin-bottom: 0px
-                    float: left
-                    .message__input
-                        margin-top: -2px
-                    label
-                        margin-top: 5px
-                        margin-bottom: 0px
-                    input
-                        font-size: 1.2em
-                        margin-top: 5px
-                    #name
-                        width: 160px
-                    #phone
-                        width: 180px
-                    #date
-                        width: 130px
-                    .icon-date 
-                        bottom: 20px
-                        right: 20px
-                        width: 17px
-                        height: 17px
-                    .datepicker
-                        width: 130px
-                        height: 45px
-                        padding-bottom: 5px
-                        margin-bottom: 10px
-                    select
-                        font-size: 1.2em
-                        margin-top: 5px
-                .check-btn
-                    margin-top: 15px
-                    margin-left: 13px
-                    width: 125px
-                    height: 50px
-                    font-size: 0.8em
-                    line-height: 50px
         .employee__background 
             width: 450px
             height: 350px
@@ -248,7 +251,7 @@
                 height: 55vh
                 z-index: -2
 
-    #availabiliti
+    #greeting
         width: 100%
         height: 55vh
         position: relative
@@ -256,9 +259,7 @@
             #background__anim_rotate
                 animation-duration: 0s
                 animation-name: none
-        .availabiliti__header
-            width: 660px
-            height: 250px
+        .greeting__header
             position: absolute
             top: 170px
             right: 0
@@ -274,7 +275,6 @@
                 font-family: 'PT Serif', serif
                 font-weight: 900
                 text-transform: uppercase
-                font-size: 2.9em
                 color: #ffffff
                 padding: 0px
                 margin-bottom: 45px
@@ -283,7 +283,6 @@
                 font-family: PoppinsLight
                 margin-top: 90px
                 color: #ffffff
-                font-size: 1.3em
                 font-weight: normal
                 letter-spacing: normal
                 // border: 1px solid blue
@@ -292,7 +291,6 @@
                 color: #ffffff
                 border: 1.5px solid
                 position: absolute
-                left: 300px
                 // border: 1px solid green
                 
     #header 
@@ -300,123 +298,138 @@
         width: 980px
         height: 60px  
         border: none
-        .header-light
-            display: none
-        .navbar
-            position: relative
-            border: none
-            .navbar__light
-                top: 0px
-                left: 0px
-                position: fixed
-                width: 980px
-                height: 55px
-                margin: 0
-                display: block
-                background-color: #444141
-                box-shadow: 0px 0px 20px #1f1d1d
-                border: none
-                z-index: 1
-                .navbar__toggler
-                    position: absolute
-                    width: 37px
-                    height: 40px
-                    top: 8px
-                    left: 15px
-                    display: block
-                    z-index: 2
-                    background-size: contain
-                    background-image: url(../img/png/menu.png)
-                    border: none
-                    transition: 0.5s
-            .navbar__pesto-logo
-                position: fixed
-                width: 110px
-                height: 50px
-                top: 0px 
-                left: 80px
-                z-index: 200
-                margin-left: 0 
-                display: block
-                margin: 0px 0px 0px 0px
-                transition: 0s !important
-            .light
-                top: 8px !important
-            
-            .navbar__items 
-                transition: left ease 0.2s
-                position: absolute
-                top: 55px
-                left: -310px
-                width: 270px
-                height: 100vh
-                border: none
-                z-index: 0
-                display: inline-flexbox
+        //display: none
+        .navbar-custom
+            display: block
+            z-index: 0
+            .navbar-big
+                display: none
+            .navbar
                 position: relative
                 border: none
-                background-color: #444141
-                box-shadow: 0px 0px 20px #1f1d1d
-            .show
-                left: -2px
-                .navbar-nav
-                    margin-top: 2px
-                    width: 267px
-                    height: 100%
+                .navbar__light
+                    border: 2px solid grey
+                    top: 0px
+                    left: 0px
+                    position: fixed
+                    width: 980px
+                    height: 55px
+                    margin: 0
+                    display: block
+                    background-color: #444141
+                    box-shadow: 0px 0px 20px #1f1d1d
                     border: none
-                    .navbar__nav-item
-                        position: relative
-                        width: 86%
-                        height: 45px
-                        list-style-type: none
-                        display: flex
-                        line-height: 45px
-                        text-transform: initial
-                        margin: 3px 0px 3px 0px
-                        font-weight: normal
-                        font-family: PoppinsLight
-                        font-size: 1.0em
+                    z-index: 1
+                    .navbar__toggler
+                        position: absolute
+                        width: 37px
+                        height: 40px
+                        top: 8px
+                        left: 15px
+                        display: block
+                        z-index: 2
+                        background-size: contain
+                        background-image: url(../img/png/menu.png)
                         border: none
-                        &:hover
+                        transition: 0.5s
+                .navbar__pesto-logo
+                    position: fixed
+                    width: 110px
+                    height: 50px
+                    top: 0px 
+                    left: 80px
+                    z-index: 200
+                    margin-left: 0 
+                    display: block
+                    margin: 0px 0px 0px 0px
+                    transition: 0s !important
+                .light
+                    top: 8px !important
+                    transition: 0s !important
+                
+                .navbar__items 
+                    transition: left ease 0.2s
+                    position: absolute
+                    top: 55px
+                    left: -310px
+                    width: 270px
+                    height: 100vh
+                    border: none
+                    z-index: 0
+                    display: inline-flexbox
+                    position: relative
+                    border: none
+                    background-color: #444141
+                    box-shadow: 0px 0px 20px #1f1d1d
+                .show
+                    left: -2px
+                    .navbar-nav
+                        margin-top: 2px
+                        width: 267px
+                        height: 100%
+                        border: none
+                        .navbar__nav-item
+                            position: relative
+                            width: 86%
+                            height: 45px
+                            list-style-type: none
+                            display: flex
+                            line-height: 45px
+                            text-transform: initial
+                            margin: 3px 0px 3px 0px
+                            font-weight: normal
+                            font-family: PoppinsLight
+                            font-size: 1.0em
+                            border: none
+                            &:hover
+                                background-color: #41a451
+                                color: #ffffff
+                                transition: 0.4s
+                            &:hover .navbar__nav-link
+                                color: #ffffff
+                                transition: 1.2s
+                        .color-fix
+                            margin-top: 15px
                             background-color: #41a451
                             color: #ffffff
-                            transition: 0.4s
-                        &:hover .navbar__nav-link
-                            color: #ffffff
-                            transition: 1.2s
-                    .color-fix
-                        margin-top: 15px
-                        background-color: #41a451
-                        color: #ffffff
-                        .navbar__nav-link 
-                            text-decoration: none
-                            color: #8d8d8d
-                        .link-fix-color
-                            color: #ffffff
-                    .navbar__btn
-                        position: absolute
-                        top: 0px
-                        left: 0px
-                        width: 125px
-                        height: 40px
-                        padding: 0px 0px 0px 0px
-                        font-size: 12px
-                        font-weight: bold
-                        text-align: center
-                        line-height: 40px
-                        background-color: #ffffff
-                        z-index: 1000
-                        &:hover
-                            background-color: #000000
-                            color: #ffffff
-                    .right
-                        position: absolute
-                        top: 250px !important
-                        left: 20px
-                        display: flex
-                        float: none
-                        transition: 0s !important
-                        margin: 0px
+                            .navbar__nav-link 
+                                text-decoration: none
+                                color: #8d8d8d
+                            .link-fix-color
+                                color: #ffffff
+                        .navbar__btn
+                            position: absolute
+                            top: 0px
+                            left: 0px
+                            width: 125px
+                            height: 40px
+                            padding: 0px 0px 0px 0px
+                            font-size: 12px
+                            font-weight: bold
+                            text-align: center
+                            line-height: 40px
+                            background-color: #ffffff
+                            z-index: 1000
+                            &:hover
+                                background-color: #000000
+                                color: #ffffff
+                        .right
+                            position: absolute
+                            top: 250px !important
+                            left: 20px
+                            display: flex
+                            float: none
+                            transition: 0s !important
+                            margin: 0px
+    #availability
+        width: 980px
+        .check-btn
+            margin-top: 15px
+            margin-left: 13px
+            width: 125px
+            height: 50px
+            font-size: 0.8em
+            line-height: 50px
 
 @media (max-width: 767px)
 

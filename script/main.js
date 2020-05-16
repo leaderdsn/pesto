@@ -1,3 +1,4 @@
+//МАССИВ КАРТИНОК ДЛЯ ГАЛЕРЕИ
 var imageData = [{
         id: 1,
         alt: 'image #1',
@@ -25,8 +26,9 @@ var imageData = [{
     }
 ]
 
-//var headerElem = $('#header');
-var headerElem = $('.header-light');
+var headerElem = $('#header');
+var navbarElemCustom = $('.navbar-custom');
+var navbarElemBig = $('.navbar-big');
 
 function myFunc() {
     var logoElem = $('.navbar__pesto-logo');
@@ -36,37 +38,40 @@ function myFunc() {
     var empBackgElem = $('.employee__background');
     var empBoxElem = $('.employee__about-box');
     var foodsFeatElem = $('.foods__featured');
+    var sliderHeader = $('.slider__header');
+    var sliderWrapper = $('.slider__wrapper');
+    var footerContainer = $('.footer__container');
     var foodsBoxElem = $('.foods__box');
     var widthMax = headerElem.attr('width');
     console.log('width ' + widthMax);
-    var sizeWidth = document.documentElement.clientWidth;
-    //if (document.documentElement.clientWidth > 1200) {
+    logoElem.css({
+        'transition': ' 0s'
+    })
     $(window).scroll(function() {
         var scrolled = $(this).scrollTop();
         if (scrolled > 100) {
-            headerElem.css({
+            navbarElemBig.css({
                 'background': 'rgb(50, 50, 50)',
                 'height': '100px',
-                'transition': ' 0.5s'
+                'transition': '0.5s'
             });
             navElem.css({
                 'line-height': '100px',
-                'transition': ' 0.5s'
+                'transition': '0.5s'
             });
             elemBtnRight.css({
                 'top': '30px',
-                'transition': ' 0.5s'
+                'transition': '0.5s'
             });
             logoElem.css({
                 'top': '10px',
-                'transition': ' 0.5s'
+                'transition': '0.5s'
             });
         }
         if (scrolled < 100) {
-            headerElem.css({
+            navbarElemBig.css({
                 'background': 'rgba(120, 125, 131, 0.3)',
                 'height': '120px',
-                'transition': 'all 0.5s'
             });
             navElem.css({
                 'line-height': '115px',
@@ -76,6 +81,7 @@ function myFunc() {
             });
             logoElem.css({
                 'top': '20px',
+                'transition': '0.5s'
             });
         }
         if (scrolled >= 380) {
@@ -119,122 +125,145 @@ function myFunc() {
 
             });
         }
-    });
-    //} else {
-    //  headerElem.css('background', 'none');
-    // }
+        if (scrolled > 3900) {
+            sliderHeader.css({
+                'opacity': '1',
+                'top': '100px',
+                'transition': 'all 0.5s'
+
+            });
+            sliderWrapper.css({
+                'opacity': '1',
+                'top': '0px',
+                'transition': 'all 0.5s'
+            });
+        }
+        if (scrolled > 4200) {
+            footerContainer.css({
+                'opacity': '1',
+                'transition': 'all 1s'
+            });
+        }
+    })
 }
-//myFunc();
+
+//READY
 $(document).ready(function() {
     myFunc();
     togglerChange();
     inputFocus();
-    $('.datepicker').datepicker({ dateFormat: 'dd/mm/y' });
-    $('.datepicker').datepicker('setDate', new Date());
+    inDateHandler();
+    $('#taskDate').datepicker({ dateFormat: 'dd/mm/y' });
+    $('#taskDate').datepicker('setDate', new Date());
     $(window).resize(function() {
         myFunc();
     });
     slider();
 });
 
-//nav-bar toogler
+//NAVBAR TOGGLE
 function togglerChange() {
     var flag = true;
     var navbarBtn = $('.navbar__toggler');
     var navbar = $('.navbar');
+    var navbarItems = $('.navbar__items');
     navbarBtn.click(function() {
         if (flag) {
-            $('.navbar__items').addClass('show');
+            navbarItems.addClass('show');
             navbarBtn.css('background-image', 'url(../img/png/previous.png)');
             navbar.css('position', 'fixed');
             flag = false;
         } else {
-            $('.navbar__items').removeClass('show');
+            navbarItems.removeClass('show');
             navbarBtn.css('background-image', 'url(../img/png/menu.png)');
-            navbar.css('position', 'absolute');
+            navbar.css('position', 'relative');
             flag = true;
+        }
+    });
+    $(document).mouseup(function(e) {
+        var $target = $(e.target);
+        if ($target.closest(navbarItems).length == 0 && $target.closest(navbarBtn).length == 0) {
+            navbarItems.removeClass("show");
+            navbarBtn.css('background-image', 'url(../img/png/menu.png)');
+            navbar.css('position', 'relative');
         }
     });
 }
 
-/**
-function checkFormDataValid(data) {
-    const taskState = [
-        TASK_ST_NEW,
-        TASK_ST_INPROGRESS,
-        TASK_ST_DONE
-    ];
-    const errors = {};
-    STATE.errState = false;
-    STATE.errors = errors;
+//AVAILABILITY
+let initElem, node;
+const MSG_NAME = 'Your name',
+    MSG_PHONE = 'Your phone number',
+    DATE_FORMAT = 'DD/MM/YY';
+document.oninput = inPhoneHandler
+let flag = true;
 
-    if (data.taskName.length < 3) {
-        errors.taskName = 'Это поле обязательно для ввода';
-    }
-    if (data.taskDate.length < 8) {
-        errors.taskDate = 'Это поле обязательно для ввода';
-    }
-    if (STATE.formState === FORM_EDIT && !taskState.includes(data.taskState)) {
-        errors.taskState = 'Укажите актуальный статус задачи';
-    }
 
-    if (Object.keys(errors).length) {
-        STATE.errState = true;
-        return false;
-    }
-    // STATE.errors = errors;
-
-    return true;
+function inDateHandler() {
+    let currentDate = new Date(DATE_FORMAT);
+    let inDateElem = document.querySelector('#taskDate');
+    inDateElem.value = currentDate;
 }
-     */
 
+//Обработка данных введённых в форму секции "availability"
 function inputFocus() {
-    $('input').focusin(function() {
-        if ($(this).val() == 'Your name' || 'Your phone number') {
-            $(this).val('');
-        }
-    })
-
-    $('input').focusout(function() {
-        if ($('#taskName').val() == '') {
-            $(this).val('Your name');
-            $(this).css({
-                'border-bottom': '1px solid #f5543f',
-            });
-            $('#errName').css('display', 'block');
-            $('.datepicker').css({
-                'border-bottom': 'none',
-            });
-        } else if ($('#taskPhone').val() == '') {
-            $(this).val('Your phone number');
-            $(this).css({
-                'border-bottom': '1px solid #f5543f',
-            });
-            $('#errPhone').css('display', 'block');
-            $('.datepicker').css({
-                'border-bottom': 'none',
-            });
-        } else if ($('input[type=text]').val() != '') {
-            $(this).css({
-                'border-bottom': 'none',
-            });
-            $('.datepicker').css({
-                'border-bottom': 'block',
-            });
-            $('#errName').css('display', 'none');
-            $('#errPhone').css('display', 'none');
-
-        }
-    })
-
-    $('#list').keypress(function() {
-        $(this).css({
-            'background': 'url(../img/svg/up-arrow.svg)',
-        });
-    })
+    const inElems = document.querySelectorAll("input");
+    let index, input;
+    for (index = 0; index < inElems.length; index++) {
+        input = inElems[index];
+        input.addEventListener('focus', focusHandler);
+        input.addEventListener('blur', blurHandler);
+    }
+    let selectElem = document.getElementById('list');
+    selectElem.addEventListener('click', selectHandler);
 }
 
-//slider
+//анимация select'а
+function selectHandler() {
+
+    let arrowElem = document.querySelector('#arrow');
+    if (flag) {
+        arrowElem.style.backgroundImage = 'url(../img/svg/arrow-down.svg)';
+        flag = false;
+        console.log('1', flag)
+    } else {
+        arrowElem.style.backgroundImage = 'url(../img/svg/up-arrow.svg)';
+        flag = true;
+        console.log('2', flag)
+    }
+}
+//Убирает ввозможность ввода букв
+function inPhoneHandler() {
+    let input = document.querySelector('input.inPhone');
+    input.value = input.value.replace(/[^\+\d]/g, '');
+}
+//Обработчик ввода данных
+function focusHandler(event) {
+    initElem = event.target.value;
+    node = event.target.nextElementSibling;
+    console.log(node.nodeName)
+    console.log('EVENT', event.target.value)
+    if (event.target.value == MSG_NAME || event.target.value == MSG_PHONE) {
+        event.target.value = '';
+        node.style.display = 'block';
+        event.target.style.borderBottom = '1px solid #f5543f';
+    }
+
+}
+//Обработчик после ввода данных
+function blurHandler(event) {
+    node = event.target.nextElementSibling;
+    if (event.target.value == '') {
+        event.target.value = initElem
+    }
+    if (event.target.value != MSG_NAME && event.target.value != MSG_PHONE) {
+        node.style.display = 'none';
+        event.target.style.borderBottom = 'none';
+        document.querySelector('.icon-date').style.display = "block"; //чтобы не исчезал "<span class="icon-date"></span>"
+    }
+}
+
+//Слайдер
 var slideNow = 1;
 var slideCount = $('.slider__wrapper').children().length;
 var slideInterval = 3000;
@@ -272,8 +301,6 @@ function slider() {
         }
     });
 }
-
-
 
 function nextSlide() {
     if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {

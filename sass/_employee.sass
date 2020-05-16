@@ -8,208 +8,68 @@
     width: 1200px
     margin: 0 auto
     padding-top: 200px 
-    border: 1px solid black
-    .availabiliti__container  
+    padding-left: 15px
+    padding-right: 15px
+    border: 1px solid red
+    .employee__container
         position: absolute
+        width: 1170px
+        border: 1px solid purple
+        height: 100%
+        max-height: 350px
         left: 0px
         right: 0px
-        top: -107px
-        width: 1130px
-        //width: 100%
-        height: 100%
-        max-height: 87px
-        border-radius: 10px
-        background-color: #ffffff
         margin: 0 auto
-        box-shadow: 0 26px 40px -20px rgba(0, 0, 0, .2)
-        padding: 60px 35px 60px 35px 
-        background-color: #ffffff
         display: block
-        font-family: PoppinsRegular
-        z-index: 1
-        .availabiliti__box
-            margin: auto
-            padding: auto
-            width: auto
-            height: auto
-            position: relative
-            justify-content: center
-            flex-wrap: no-wrap
-            .availabiliti__box-item
-                font-size: 0.85em
-                display: inline-block
-                float: left
-                position: relative
-                border-right: 1px solid #e7e7e7
-                padding-right: 15px
-                margin-right: 20px
-                margin-bottom: 20px 
-                .message__input
-                    float: right
-                    font-size: 0.7em
-                    color: #f5543f
-                    display: none
-
-    .employee__background 
-        position: absolute
-        left: -600px
-        width: 480px
-        height: 336px
-        background-image: url(../img/jpg/home-3-1-483x327.jpg)
-        background-size: contain
-        background-repeat: no-repeat
-        border-radius: 10px
-        display: inline-block
-        opacity: 0
-        .employee__img
+        .employee__background 
             position: absolute
-            bottom: 10px
-            left: 65px
-            width: 341px
-            height: 391px
-            background-image: url(../img/png/home-3-2-341x391.png)
+            left: -600px
+            width: 480px
+            height: 336px
+            background-image: url(../img/jpg/home-3-1-483x327.jpg)
             background-size: contain
             background-repeat: no-repeat
+            border-radius: 10px
+            display: inline-block
+            opacity: 0
+            .employee__img
+                position: absolute
+                bottom: 10px
+                left: 65px
+                width: 341px
+                height: 391px
+                background-image: url(../img/png/home-3-2-341x391.png)
+                background-size: contain
+                background-repeat: no-repeat
 
-    .employee__about-box
-        position: absolute
-        right: -600px
-        float: right
-        margin-left: 10%
-        width: 480px
-        height: 336px
-        display: block
-        opacity: 0
-        h2
-            font-size: 3.1em
-            text-align: left
-            margin-top: 0
-            margin-bottom: 0
-            font-family: "pt serif", times new roman, Times, serif
-            font-weight: bold
-            color: #151515
-            letter-spacing: 0
-        p
-            margin-top: 25px
-            font-size: 0.9em
-            text-align: justify
-            color: #858585
-            line-height: 1.6
-            font-family: PoppinsLight
-        .employee__autograph
-            margin-top: 40px
-            width: 140px
-            height: 50px
-            background-image: url(../img/png/signature-1-140x50.png)
-
-.no-right-border
-    border-right: 0 !important
-
-label
-    display: block
-    float: top
-    text-align: left
-    color: #858585
-    text-transform: uppercase
-    margin-bottom: 10px
-input
-    font-size: 1.5em
-    display: block
-    color: #323232
-    border: none
-    outline: none
-
-#name
-    width: 230px
-    height: 40px
-#phone
-    width: 260px
-    height: 40px
-#date
-    width: 170px
-    height: 40px
-.icon-date 
-    position: absolute
-    bottom: 25px
-    right: 25px
-    display: inline-block
-    width: 20px
-    height: 20px
-    background-image: url(../img/svg/calendar2.svg)
-    background-repeat: no-repeat
-.datepicker
-    font-family: PoppinsRegular
-    width: 170px
-    height: 40px
-    margin-bottom: 15px
-    border: none
-    display: block
-    outline: none
-
-#list
-    width: 70px
-    height: 40px
-    color: #323232
-    margin-bottom: 15px
-    appearance: none
-    -webkit-appearance: none
-    -moz-appearance: none
-    -ms-appearance: none
-    background: url(../img/svg/arrow-down.svg) 96% / 20% no-repeat
-    &:focus
-        outline: none
-    ::-ms-expand
-        display: none 
-
-select
-    font-family: PoppinsRegular
-    margin: 0
-    padding: 0
-    float: left
-    font-size: 1.5em
-    border: none
-    option
-        padding: 30px
-        background-color: #323232
-        color: #ffffff
-        text-align: center
-        font-size: 0.8em
-        outline: none
-        direction: rtl
-        text-align-last: center
-        &:hover 
-            background-color: #ffffff
-            color: #323232
-
-.icon-arrow 
-    position: absolute
-    bottom: 30px
-    right: 45px
-    width: 14px
-    height: 14px
-    background-image: url(../img/svg/arrow-down.svg)
-    background-repeat: no-repeat
-    background-size: contain
-    background-color: #ffffff
-
-.check-btn
-    margin-top: 7.5px
-    width: 160px
-    height: 65px
-    display: inline-flex
-    background-color: #323232
-    text-transform: uppercase
-    font-size: 1.0em
-    font-weight: bold
-    line-height: 65px
-    padding: 0 20px
-    text-align: center
-    color: #ffffff
-    font-family: 'Segoe UI', sans-serif
-    transition: 0.5s
-    &:hover
-        background-color: #409c4f
-        color: white
-        transition: 0.5s
-    
+        .employee__about-box
+            position: absolute
+            right: -600px
+            float: right
+            margin-left: 10%
+            width: 480px
+            height: 336px
+            display: block
+            opacity: 0
+            h2
+                font-size: 3.1em
+                text-align: left
+                margin-top: 0
+                margin-bottom: 0
+                font-family: "pt serif", times new roman, Times, serif
+                font-weight: bold
+                color: #151515
+                letter-spacing: 0
+            p
+                margin-top: 25px
+                font-size: 0.9em
+                text-align: justify
+                color: #858585
+                line-height: 1.6
+                font-family: PoppinsLight
+            .employee__autograph
+                margin-top: 40px
+                width: 140px
+                height: 50px
+                background-image: url(../img/png/signature-1-140x50.png)
 

@@ -1,108 +1,112 @@
 #header
-    position: fixed
+    position: absolute
     width: 100vw
     height: 120px
     margin: 0 auto
-    padding: 0px
     display: inline-flex
-    //background-color: rgba(120, 125, 131, 0.3)
-    transition: 0.5
-    z-index: 99
+    //transition: 0.1
     //border: 1px solid yellow
-    .header-light
-            position: absolute
+    .navbar-custom
+        position: fixed
+        width: 100%
+        height: auto 
+        //border: 2px solid green
+        .navbar-big
+            position: fixed
             width: 100vw
             height: 120px 
             background-color: rgba(120, 125, 131, 0.3)
-    .navbar 
-        //border: 1px solid green
-        position: relative
-        width: 100%
-        height: 100%
-        margin: 0px
-        padding: 0px
-        display: flex
-        text-align: center
-        transition: 0.5
-        .navbar__light
-            //border: 1px solid blue
-            display: none
-            .navbar__toggler
-                width: 60px
-                height: 60px
-                margin: 1px 0px 0px 0px
-                display: none
-                cursor: pointer
-        .navbar__pesto-logo
-            position: absolute
-            left: 10px
-            top: 20px
-            width: 165px
-            height: 60px
-            background-image: url(../img/png/Pesto-logo.png)
-            background-size: contain
-            background-repeat: no-repeat
-            margin: 7px 0px 0px 10px
-        .light
-            display: block
-        .navbar__items
+            //border: 2px solid red
+        .navbar 
+            //border: 1px solid green
             position: relative
             width: 100%
-            display: inline-flex
-            padding: 0px
+            height: 100%
             margin: 0px
-            .navbar-nav
+            padding: 0px
+            display: flex
+            text-align: center
+            transition: 0.5
+            .navbar__light
                 //border: 1px solid blue
+                //display: none
+                .navbar__toggler
+                    width: 60px
+                    height: 60px
+                    margin: 1px 0px 0px 0px
+                    display: none
+                    cursor: pointer
+            .navbar__pesto-logo
+                position: absolute
+                left: 10px
+                top: 20px
+                width: 165px
+                height: 60px
+                background-image: url(../img/png/Pesto-logo.png)
+                background-size: contain
+                background-repeat: no-repeat
+                margin: 7px 0px 0px 10px
+            .light
+                display: block
+            .navbar__items
+                position: relative
                 width: 100%
-                margin: 0px 0% 0px 0%
-                display: inline-flexbox
-                line-height: 115px
-                text-decoration: none
-                .navbar__nav-item
+                display: inline-flex
+                padding: 0px
+                margin: 0px
+                .navbar-nav
                     //border: 1px solid blue
-                    font-family: PoppinsRegular
-                    height: 50px
-                    padding: 0px 20px 0px 20px
-                    text-transform: uppercase
-                    display: inline-flex
-                    margin: 0px
-                    line-height: 50px
-                    font-size: 14px
-                    font-weight: bold
-                    .navbar__nav-link
-                        text-decoration: none
-                        color: #ffffff
-                        transition: 0.5s
-                        &:hover
-                            color: #41a451
+                    width: 100%
+                    margin: 0px 0% 0px 0%
+                    display: inline-flexbox
+                    line-height: 115px
+                    text-decoration: none
+                    .navbar__nav-item
+                        //border: 1px solid blue
+                        font-family: PoppinsRegular
+                        height: 50px
+                        padding: 0px 20px 0px 20px
+                        text-transform: uppercase
+                        display: inline-flex
+                        margin: 0px
+                        line-height: 50px
+                        font-size: 14px
+                        font-weight: bold
+                        .navbar__nav-link
+                            text-decoration: none
+                            color: #ffffff
                             transition: 0.5s
-                    .link-fix-color
-                        color: #41a451
-                .navbar__btn 
-                    position: relative
-                    width: 130px
-                    height: 35px
-                    background-color: #ffffff
-                    text-align: center
-                    font-size: 12px
-                    font-weight: bold
-                    font-family: PoppinsRegular
-                    &:hover
-                        background-color: #000000
-                        color: #ffffff
-                        transition: 0.5s
-                    span
-                        position: absolute
-                        top: 0px
-                        left: 29px
+                            &:hover
+                                color: #41a451
+                                transition: 0.5s
+                        .link-fix-color
+                            color: #41a451
+                    .navbar__btn 
+                        position: relative
+                        width: 130px
+                        height: 35px
+                        background-color: #ffffff
                         text-align: center
-                .right 
-                    position: absolute
-                    right: 40px
-                    top: 40px
-                    display: inline-flex
-                    list-style-type: none
-                    padding: 0px 0px 0px 0px
-                    text-transform: uppercase
-                    line-height: 35px
-                    text-align: center
+                        font-size: 12px
+                        font-weight: bold
+                        font-family: PoppinsRegular
+                        //margin-right: 30px
+                        &:hover
+                            background-color: #000000
+                            color: #ffffff
+                            transition: 0.5s
+                        span
+                            position: absolute
+                            top: 0px
+                            left: 29px
+                            text-align: center
+                    .right 
+                        position: absolute
+                        right: 40px
+                        top: 40px
+                        display: inline-flex
+                        list-style-type: none
+                        padding: 0px 0px 0px 0px
+                        text-transform: uppercase
+                        line-height: 35px
+                        text-align: center
