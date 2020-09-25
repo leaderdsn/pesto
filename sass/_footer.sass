@@ -5,7 +5,7 @@
     right: 0
     left: 0
     display: block
-    width: 1200px
+    width: 100%
     margin: 0 auto
     padding-top: 135px
     text-align: center 
@@ -13,9 +13,8 @@
     .footer__container
         width: 100%
         margin: 0 auto
-        //border: 1px solid grey
-        opacity: 0
-        .logo__pesto-img
+        opacity: 1
+        .footer__logo
             position: relative
             display: inline-flex
             width: 155px
@@ -27,7 +26,7 @@
         .footer__nav-items
             position: relative
             display: block
-            padding: 0px 0px 0px 0px
+            padding: 0px
             margin-bottom: 70px
             .footer__nav-item 
                 text-decoration: none
@@ -50,12 +49,10 @@
                             transition: 0.5s
             .no__border-right 
                 border-right: none
-                
         .footer__social-items
             position: relative
-            //width: 100%
             display: block
-            padding: 0 0 0 0
+            padding: 0px
             text-align: center   
             margin-bottom: 110px  
             .footer__social-item
@@ -69,7 +66,7 @@
                 line-height: 50px
                 .footer__social-link
                     color: #409c4f
-                .logo__facebook-img
+                .footer__logo-facebook
                     border-radius: 50%
                     width: 50px
                     height: 50px
@@ -81,7 +78,7 @@
                     &:hover
                         background-color: #409c4f
                         transition: 0.5s
-                .logo__instagram-img
+                .footer__logo-instagram
                     border-radius: 50%
                     width: 50px
                     height: 50px
@@ -94,7 +91,7 @@
                         transition: 0.5s
                         background-color: #409c4f
                         transition: 0.5s
-                .logo__twitter-img
+                .footer__logo-twitter
                     border-radius: 50%
                     width: 50px
                     height: 50px
@@ -106,7 +103,7 @@
                     &:hover
                         background-color: #409c4f
                         transition: 0.5s
-                .logo__youtube-img
+                .footer__logo-youtube
                     border-radius: 50%
                     width: 50px
                     height: 50px
@@ -118,7 +115,7 @@
                     &:hover
                         background-color: #409c4f
                         transition: 0.5s
-                .logo__pinterest-img
+                .footer__logo-pinterest
                     border-radius: 50%
                     width: 50px
                     height: 50px
@@ -130,10 +127,7 @@
                     &:hover
                         background-color: #409c4f
                         transition: 0.5s
-        p
+        .privacy
             color:#7f7f7f
             font-size: 17px
-                    
-       
-
-    
+            z-index: 1

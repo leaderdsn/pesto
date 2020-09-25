@@ -1,9 +1,14 @@
 #gallery
+    position: relative
+    //padding-top: 100px
     #gallary__top
+        top: -429px
         width: 100%
         overflow: hidden
         padding-bottom: 21%
         position: relative
+        opacity: 0
+        z-index: 3
         .top__columns
             position: absolute
             width: 100%
@@ -28,10 +33,14 @@
                     right: 0%
                     transition: 0.5s
     #gallary__bottom
+        position: absolute
+        top: 429px
         width: 100%
         overflow: hidden
         padding-bottom: 21%
         position: relative
+        opacity: 0
+        z-index: 3
         .bottom__columns
             position: absolute
             width: 100%
@@ -54,74 +63,57 @@
                     right: 0%
                     transition: 0.5s
 
-.item__zoom
-    position: absolute
-    height: 150px
-    width: 150px
-    top: 0
-    left: 0
-    right: 5%
-    transition: 0.5s
-    bottom: 0
-    margin: auto auto
-    opacity: 0
-    transition: 0.5s
-    &:hover .item__zoom_out
-        width: 150px
-        height: 150px
-        transition: 0.5s
-    .item__zoom_in
+    .item__zoom
         position: absolute
+        height: 150px
+        width: 150px
         top: 0
         left: 0
-        right: 0
+        right: 5%
+        transition: 0.5s
         bottom: 0
         margin: auto auto
-        width: 100px
-        height: 100px
-        font-family: PoppinsRegular
-        font-size: 25px
-        font-weight: bold
-        text-align: center
-        line-height: 100px
-        color: #000000
-        border-radius: 50%
-        background-color: #ffffff
-        opacity: 1
-        cursor: pointer
-        &:hover .item__zoom_out
+        opacity: 0
+        transition: 0.5s
+        &:hover .item__zoom-out
             width: 150px
             height: 150px
-            transition: 0.5s 
-    .item__zoom_out
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        margin: auto auto
-        width: 125px
-        height: 125px
-        border-radius: 50%
-        background-color: #ffffff
-        opacity: 0.5
-        transition: 0.5s
-        cursor: pointer
-
-    
- 
-@media (max-width: 1200px)
-    #gallery
-        width: 100%
-@media (max-width: 980px)
-    #gallery
-        width: 100%
-@media (max-width: 767px)
-    #gallery
-        width: 100%
-@media (max-width: 480px)
-    #gallery
-        width: 100% 
-
-     
+            transition: 0.5s
+        .item__zoom-in
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto auto
+            width: 100px
+            height: 100px
+            font-family: PoppinsRegular
+            font-size: 25px
+            font-weight: bold
+            text-align: center
+            line-height: 100px
+            color: #000000
+            border-radius: 50%
+            background-color: #ffffff
+            opacity: 1
+            cursor: pointer
+            &:hover .item__zoom-out
+                width: 150px
+                height: 150px
+                transition: 0.5s 
+        .item__zoom-out
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto auto
+            width: 125px
+            height: 125px
+            border-radius: 50%
+            background-color: #ffffff
+            opacity: 0.5
+            transition: 0.5s
+            cursor: pointer  
 

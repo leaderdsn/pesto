@@ -1,4 +1,4 @@
-#gallery__slider
+#gallery-preview
     position: fixed
     visibility: hidden
     width: 100%
@@ -9,14 +9,15 @@
     display: flex
     justify-content: center
     align-items: center
-    .slider__header
+    z-index: 3
+    .gallery-preview__header
         position: absolute
         top: 0
         left: 0
         width: 100%
         height: 60px
         background-color: rgba(0, 0, 0, 1)
-        z-index: 2
+        z-index: 5
         .btn__exit
             position: absolute
             width: 40px
@@ -33,13 +34,13 @@
             //background-color: black
             color: white
             //border: 2px solid white
-            z-index: 2
+            z-index: 4
             &:hover
                 opacity: 1
                 transition: 0.5s
                 
 
-        .label__count
+        .label-count
             position: absolute
             width: 60px
             height: 30px
@@ -63,14 +64,13 @@
             background-color: #000000
             transition: 0.5s
             opacity: 0.5
-            z-index: 2
+            z-index: 4
             border: none
             outline: none
             cursor: pointer
             &:hover
                 opacity: 1
                 transition: 0.5s
-
         .btn__zoom-in
             position: absolute
             width: 30px
@@ -84,54 +84,27 @@
             background-color: #000000
             transition: 0.5s
             opacity: 0.5
-            z-index: 2
+            z-index: 4
             border: none
             outline: none
             cursor: pointer
             &:hover
                 opacity: 1
                 transition: 0.5s
-
-
-
-
-    /*.slider__preview
+    .table
+        display: table
         width: 100%
         height: 100%
-        //margin: auto auto*/ 
-        /*.image__preview
-            position: absolute
-            width: 100%
-            height: 100%
-            background-repeat: no-repeat
-            background-position: center
-            background-size: contain
-            background-color: black 
-            z-index: 1*/
-    .slider__preview
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0 
-        width: 75%
-        height: 82%
-        margin: auto auto
-        .image__preview
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            width: 100%
-            height: 100%
-            margin: auto auto
-            background-repeat: no-repeat
-            background-position: center
-            background-size: cover
-            background-color: black 
-            z-index: 1
-
+        .slider-preview
+            display: table-cell
+            vertical-align: middle
+            .image-preview
+                display: block
+                width: 100%
+                max-width: calc(640px * $unitOfmultiplicity)
+                margin: 0 auto
+                opacity: 1
+                transition: 0.5s
     .btn__prev
         width: 50px
         height: 50px
@@ -142,11 +115,11 @@
         border-bottom-left-radius: 10px
         border: none
         background-color: rgba(0, 0, 0, 0.3)
-        z-index: 2
-        &:hover  .img_prev
+        z-index: 3
+        &:hover  .img__prev
             transition: 0.5s
             background-image: url(../img/png/arrow_previous_white_bold.png)
-        .img_prev
+        .img__prev
             position: absolute
             top: 10px
             right: 10px
@@ -155,7 +128,7 @@
             background-image: url(../img/png/arrow_previous_white_normal.png)
             width: 30px
             height: 30px
-            opacity: 1
+            opacity: 3
             transition: 0.5s
 
     .btn__next
@@ -169,11 +142,11 @@
         border-bottom-right-radius: 10px
         border: none
         background-color: rgba(0, 0, 0, 0.3)
-        z-index: 2
-        &:hover  .img_next
+        z-index: 3
+        &:hover  .img__next
             background-image: url(../img/png/arrow_next_white_bold.png)
             transition: 0.5s
-        .img_next
+        .img__next
             position: absolute
             top: 10px
             left: 10px
@@ -182,5 +155,5 @@
             background-image: url(../img/png/arrow_next_white_normal.png)
             width: 30px
             height: 30px
-            opacity: 1
+            opacity: 3
             transition: 0.5s
