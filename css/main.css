@@ -280,11 +280,11 @@
   font-size: 4.9em;
   color: #ffffff;
   padding: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 #greeting .greeting__header p {
   font-family: PoppinsLight;
-  margin-top: 60px;
+  margin-top: 3rem;
   color: #ffffff;
   font-size: 1.1em;
   font-weight: normal;
@@ -1593,7 +1593,6 @@
   }
   #greeting .greeting__header h1 {
     font-size: 2.9em;
-    margin-bottom: 35px;
   }
   #greeting .greeting__header p {
     margin-top: 65px;
@@ -1837,13 +1836,6 @@
   }
   #greeting .greeting__header {
     top: 170px;
-  }
-  #greeting .greeting__header h1 {
-    margin-bottom: 45px;
-    font-size: 2em;
-  }
-  #greeting .greeting__header p {
-    margin-top: 90px;
   }
 
   #availability {
@@ -2116,11 +2108,9 @@
     width: 100%;
   }
   #greeting .greeting__header h1 {
-    margin-bottom: 30px;
     font-size: 2em;
   }
   #greeting .greeting__header p {
-    margin-top: 65px;
     font-size: 1.05em;
   }
   #greeting .greeting__header hr {
@@ -2492,15 +2482,15 @@
     min-width: 320px;
   }
   #greeting .greeting__header h1 {
-    margin-bottom: 35px;
     font-size: 1.9em;
+    margin-bottom: 1.5rem;
   }
   #greeting .greeting__header p {
     top: 100px;
     left: 0;
     right: 0;
     font-size: 1.1em;
-    margin: 0 auto;
+    margin-top: 0.8rem;
     position: absolute;
     padding: 0;
   }
