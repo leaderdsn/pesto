@@ -194,7 +194,9 @@
 #content .section:nth-child(1) {
   max-height: 100%;
   z-index: -2;
+  border: 10px solid red;
   background-color: #f5f5f5;
+  display: none;
 }
 #content .section:nth-child(2) {
   height: 0%;
@@ -202,17 +204,17 @@
 }
 #content .section:nth-child(3) {
   background-color: #f5f5f5;
-  max-height: 70%;
+  max-height: 67%;
   z-index: 1;
 }
 #content .section:nth-child(4) {
   background-color: #ffffff;
-  max-height: 100%;
+  max-height: 93%;
   z-index: 1;
 }
 #content .section:nth-child(5) {
   background-color: #f5f5f5;
-  min-height: 145%;
+  min-height: 130%;
   z-index: 1;
 }
 #content .section:nth-child(6) {
@@ -223,7 +225,7 @@
 #content .section:nth-child(7) {
   padding-top: 0.1%;
   background-color: #ffffff;
-  max-height: 85%;
+  max-height: 80%;
 }
 #content .section:nth-child(8) {
   background-color: #323232;
@@ -235,7 +237,7 @@
   height: 100vh;
   position: relative;
 }
-#greeting #greeting__background-anim {
+#greeting #background__anim {
   position: relative;
   width: 100%;
   height: 100%;
@@ -245,7 +247,7 @@
   align-items: center;
   justify-content: center;
 }
-#greeting #greeting__background-anim .greeting__background-rotate {
+#greeting #background__anim .background__anim-rotate {
   background: linear-gradient(rgba(20, 20, 27, 0.5), rgba(43, 53, 66, 0.5)), url(../img/jpg/bg-bunner-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -268,7 +270,7 @@
   bottom: 0;
   left: 0;
   margin: 0 auto;
-  display: flexbox;
+  display: block;
   text-shadow: 5px 5px 10px rgba(20, 20, 27, 0.4);
   text-align: center;
   z-index: 1;
@@ -280,7 +282,7 @@
   font-size: 4.9em;
   color: #ffffff;
   padding: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 #greeting .greeting__header p {
   font-family: PoppinsLight;
@@ -291,12 +293,11 @@
   letter-spacing: normal;
 }
 #greeting .greeting__header hr {
-  display: flex;
   width: 60px;
   color: #ffffff;
-  background-color: #ffffff;
   border: 1.5px solid;
-  margin: 0 auto;
+  position: absolute;
+  left: 255px;
 }
 
 @keyframes rotate {
@@ -380,7 +381,7 @@
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-#availability .availability__container .availability__box .availability__box-item .in-name {
+#availability .availability__container .availability__box .availability__box-item .inName {
   width: 200px;
   height: 40px;
   font-size: 1.5em;
@@ -390,7 +391,7 @@
   outline: none;
   font-family: PoppinsLight;
 }
-#availability .availability__container .availability__box .availability__box-item .in-phone {
+#availability .availability__container .availability__box .availability__box-item .inPhone {
   width: 235px;
   height: 40px;
   font-size: 1.5em;
@@ -400,13 +401,13 @@
   outline: none;
   font-family: PoppinsLight;
 }
-#availability .availability__container .availability__box .availability__box-item .message-input {
+#availability .availability__container .availability__box .availability__box-item .message__input {
   float: right;
   font-size: 0.7em;
   color: #f5543f;
   display: none;
 }
-#availability .availability__container .availability__box .availability__box-item .in-date {
+#availability .availability__container .availability__box .availability__box-item .inDate {
   width: 170px;
   height: 40px;
   font-family: PoppinsLight;
@@ -577,7 +578,7 @@
   font-size: 0.9em;
   text-align: justify;
   color: #858585;
-  line-height: 24px;
+  line-height: 1.6;
   font-family: PoppinsLight;
 }
 #employee .employee__container .employee__about-box .employee__autograph {
@@ -601,7 +602,7 @@
   padding-right: 15px;
   z-index: 0;
 }
-#foods .food__container {
+#foods .foods__container {
   position: absolute;
   max-width: 1170px;
   width: 100%;
@@ -611,7 +612,7 @@
   margin: 0 auto;
   display: block;
 }
-#foods .food__container .food__featured {
+#foods .foods__container .food__featured {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -625,7 +626,7 @@
   z-index: 1;
   opacity: 0;
 }
-#foods .food__container .food__featured h2 {
+#foods .foods__container .food__featured h2 {
   margin-top: 115px;
   font-size: 2.8em;
   font-family: "PT Serif";
@@ -633,7 +634,7 @@
   color: #151515;
   letter-spacing: 0;
 }
-#foods .food__container .food__featured p {
+#foods .foods__container .food__featured p {
   margin-top: 35px;
   font-size: 1.04em;
   text-align: center;
@@ -642,7 +643,7 @@
   font-family: PoppinsLight, sans-serif;
   font-weight: normal;
 }
-#foods .food__container .food__box {
+#foods .foods__container .food__box {
   position: absolute;
   width: 100%;
   top: 465px;
@@ -650,41 +651,42 @@
   right: 0px;
   bottom: -465px;
   margin: 0 auto;
-  display: flexbox;
+  display: inline-block;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 100px 0 0 0;
   text-align: center;
 }
-#foods .food__container .food__box .food__card {
-  display: flex;
+#foods .foods__container .food__box .food__card {
   position: relative;
   width: 370px;
   display: inline-block;
   transition: 0.5s;
 }
-#foods .food__container .food__box .food__card:hover .btn__order {
+#foods .foods__container .food__box .food__card:hover .btn__order {
   top: 280px;
   transition: 0.5s;
   opacity: 1;
 }
-#foods .food__container .food__box .food__card .img__ravioli {
+#foods .foods__container .food__box .food__card .img__ravioli {
   position: relative;
   width: 370px;
   height: 390px;
   background-image: url(../img/jpg/product-1-370x395.jpg);
 }
-#foods .food__container .food__box .food__card .img__pasta {
+#foods .foods__container .food__box .food__card .img__pasta {
   position: relative;
   width: 370px;
   height: 390px;
   background-image: url(../img/jpg/product-2-370x395.jpg);
 }
-#foods .food__container .food__box .food__card .img__gelato {
+#foods .foods__container .food__box .food__card .img__gelato {
   position: relative;
   width: 370px;
   height: 390px;
   background-image: url(../img/jpg/product-3-370x395.jpg);
 }
-#foods .food__container .food__box .food__card .btn__order {
+#foods .foods__container .food__box .food__card .btn__order {
   position: absolute;
   top: 250px;
   left: 110px;
@@ -702,11 +704,11 @@
   opacity: 0;
   cursor: pointer;
 }
-#foods .food__container .food__box .food__card .btn__order:hover {
+#foods .foods__container .food__box .food__card .btn__order:hover {
   background-color: #444141;
   transition: 0.5s;
 }
-#foods .food__container .food__box .food__card h3 {
+#foods .foods__container .food__box .food__card h3 {
   margin-top: 20px;
   font-family: "pt serif", times new roman, Times, serif;
   font-size: 1.7em;
@@ -714,14 +716,13 @@
   font-weight: normal;
   text-align: center;
 }
-#foods .food__container .food__box .food__card p {
+#foods .foods__container .food__box .food__card p {
   font-family: PoppinsRegular, sans-serif;
   color: #41a451;
   font-size: 1.2em;
   text-align: center;
-  line-height: 64px;
 }
-#foods .food__container .food__box .card-distance {
+#foods .foods__container .food__box .card-distance {
   margin: 0 23px 0 23px;
 }
 
@@ -833,17 +834,17 @@
   letter-spacing: 2px;
   margin-top: 15px;
 }
-#menu .menu__container .container__tabs .menu__box .product-name {
+#menu .menu__container .container__tabs .menu__box .productName {
   font-family: "Pt serif", "Times new roman", Times, serif;
   font-weight: normal;
   font-size: 1.6em;
   color: #000000;
   margin-top: 15px;
 }
-#menu .menu__container .container__tabs .menu__box .product-name a {
+#menu .menu__container .container__tabs .menu__box .productName a {
   text-decoration: none;
 }
-#menu .menu__container .container__tabs .menu__box .product-name a:hover {
+#menu .menu__container .container__tabs .menu__box .productName a:hover {
   color: #41a451;
 }
 #menu .menu__container .container__tabs .menu__box .description {
@@ -851,7 +852,6 @@
   font-size: 0.9em;
   color: #808080;
   margin-top: 15px;
-  line-height: 24px;
 }
 
 #gallery {
@@ -866,13 +866,13 @@
   opacity: 0;
   z-index: 3;
 }
-#gallery #gallary__top .gallary__columns {
+#gallery #gallary__top .top__columns {
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
 }
-#gallery #gallary__top .gallary__columns .gallary__item {
+#gallery #gallary__top .top__columns .top__item {
   position: relative;
   width: 33.33%;
   background-repeat: round;
@@ -880,16 +880,16 @@
   align-items: center;
   justify-content: center;
 }
-#gallery #gallary__top .gallary__columns .gallary__item:nth-child(1) {
+#gallery #gallary__top .top__columns .top__item:nth-child(1) {
   background-image: url(../img/jpg/gallery-masonry-1-640x429.jpg);
 }
-#gallery #gallary__top .gallary__columns .gallary__item:nth-child(2) {
+#gallery #gallary__top .top__columns .top__item:nth-child(2) {
   background-image: url(../img/jpg/gallery-masonry-2-640x429.jpg);
 }
-#gallery #gallary__top .gallary__columns .gallary__item:nth-child(3) {
+#gallery #gallary__top .top__columns .top__item:nth-child(3) {
   background-image: url(../img/jpg/gallery-masonry-3-640x429.jpg);
 }
-#gallery #gallary__top .gallary__columns .gallary__item:hover .item__zoom {
+#gallery #gallary__top .top__columns .top__item:hover .item__zoom {
   opacity: 1;
   transition: 0.5s;
   right: 0%;
@@ -905,13 +905,13 @@
   opacity: 0;
   z-index: 3;
 }
-#gallery #gallary__bottom .gallary__columns {
+#gallery #gallary__bottom .bottom__columns {
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
 }
-#gallery #gallary__bottom .gallary__columns .gallary__item {
+#gallery #gallary__bottom .bottom__columns .bottom__item {
   position: relative;
   width: 50%;
   background-repeat: round;
@@ -919,13 +919,13 @@
   align-items: center;
   justify-content: center;
 }
-#gallery #gallary__bottom .gallary__columns .gallary__item:nth-child(1) {
+#gallery #gallary__bottom .bottom__columns .bottom__item:nth-child(1) {
   background-image: url(../img/jpg/gallery-masonry-4-960x429.jpg);
 }
-#gallery #gallary__bottom .gallary__columns .gallary__item:nth-child(2) {
+#gallery #gallary__bottom .bottom__columns .bottom__item:nth-child(2) {
   background-image: url(../img/jpg/gallery-masonry-5-960x429.jpg);
 }
-#gallery #gallary__bottom .gallary__columns .gallary__item:hover .item__zoom {
+#gallery #gallary__bottom .bottom__columns .bottom__item:hover .item__zoom {
   opacity: 1;
   transition: 0.5s;
   right: 0%;
@@ -1080,7 +1080,7 @@
   justify-content: center;
   flex-wrap: nowrap;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news {
   position: relative;
   width: 100%;
   padding: 10px;
@@ -1090,7 +1090,7 @@
   text-align: left;
   margin: 0 5px 0 5px;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .slide__box-date {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .news__date {
   background-color: #323232;
   color: #ffffff !important;
   text-align: center;
@@ -1105,16 +1105,16 @@
   margin-bottom: 10px;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .slide__box-date a {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .news__date a {
   color: #ffffff;
   text-decoration: none;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .slide__box-date:hover {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .news__date:hover {
   background-color: #41a451;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news h4 {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news h4 {
   font-family: "Pt serif", "times new roman", Times, serif;
   font-size: 1.7em;
   color: #151515;
@@ -1125,23 +1125,22 @@
   margin-bottom: 15px;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news h4 a {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news h4 a {
   color: #151515;
   text-decoration: none;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news h4 a:hover {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news h4 a:hover {
   color: #41a451;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news p {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news p {
   color: #848484;
   font-size: 0.9em;
   font-family: PoppinsLight;
   margin-bottom: 10px;
-  line-height: 24px;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .read__more {
   cursor: pointer;
   margin-top: 10px;
   position: absolute;
@@ -1156,20 +1155,20 @@
   transition: 0.5s;
   z-index: 100;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more a {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .read__more a {
   text-decoration: none;
   color: #313131;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more a:hover {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .read__more a:hover {
   color: #41a451;
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more:hover .arrow-right {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .read__more:hover .arrow-right {
   background-image: url(../img/png/right-arrow-green.png);
   transition: 0.5s;
 }
-#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more .arrow-right {
+#slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .read__more .arrow-right {
   transition: 0.5s;
   position: relative;
   width: 25px;
@@ -1189,7 +1188,7 @@
   text-align: center;
   z-index: 1;
 }
-#slider .slider__container .slider__viewport .nav__btns .btn-slide {
+#slider .slider__container .slider__viewport .nav__btns .nav__btn_slide {
   position: relative;
   display: inline-block;
   list-style: none;
@@ -1201,7 +1200,7 @@
   transition: 0.5s;
   z-index: 2;
 }
-#slider .slider__container .slider__viewport .nav__btns .btn-slide:hover {
+#slider .slider__container .slider__viewport .nav__btns .nav__btn_slide:hover {
   transition: 0.5s;
   cursor: pointer;
   background-color: #409c4f;
@@ -1575,21 +1574,24 @@
     max-height: 65%;
   }
   #content .section:nth-child(4) {
-    min-height: 220%;
+    min-height: 145%;
   }
   #content .section:nth-child(5) {
-    min-height: 140%;
+    min-height: 125%;
   }
   #content .section:nth-child(7) {
-    max-height: 75%;
+    max-height: 68%;
   }
   #content .section:nth-child(8) {
     max-height: 55%;
   }
 
-  #greeting #greeting__background-anim .greeting__background-rotate {
+  #greeting #background__anim .background__anim-rotate {
     animation-duration: 0s;
     animation-name: none;
+  }
+  #greeting .greeting__header {
+    width: 660px;
   }
   #greeting .greeting__header h1 {
     font-size: 2.9em;
@@ -1603,14 +1605,12 @@
   }
 
   #availability {
-    max-width: 950px;
-    min-width: 920px;
+    max-width: 980px;
   }
   #availability .availability__container {
     top: -75px;
-    max-width: 900px;
-    min-width: 890px;
-    padding: 35px 15px 35px 15px;
+    max-width: 950px;
+    padding: 35px 17px 35px 17px;
   }
   #availability .availability__container .availability__box .availability__box-item {
     padding-right: 13.5px;
@@ -1623,24 +1623,24 @@
     margin-top: 5px;
     margin-bottom: 0px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-name {
+  #availability .availability__container .availability__box .availability__box-item .inName {
     width: 180px;
     height: 30px;
     font-size: 1.2em;
     margin-top: 5px;
     padding-bottom: 5px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-phone {
+  #availability .availability__container .availability__box .availability__box-item .inPhone {
     width: 210px;
     height: 30px;
     font-size: 1.2em;
     margin-top: 5px;
     padding-bottom: 5px;
   }
-  #availability .availability__container .availability__box .availability__box-item .message-input {
+  #availability .availability__container .availability__box .availability__box-item .message__input {
     margin-top: -2px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-date {
+  #availability .availability__container .availability__box .availability__box-item .inDate {
     width: 140px;
     height: 30px;
     font-size: 1.2em;
@@ -1673,12 +1673,10 @@
   }
 
   #employee {
-    max-width: 950px;
-    min-width: 920px;
+    max-width: 980px;
   }
   #employee .employee__container {
-    max-width: 930px;
-    min-width: 900px;
+    max-width: 980px;
   }
   #employee .employee__container .employee__background {
     width: 450px;
@@ -1701,41 +1699,69 @@
   }
 
   #foods {
-    max-width: 950px;
-    min-width: 920px;
+    max-width: 980px;
   }
-  #foods .food__container {
-    max-width: 930px;
-    min-width: 900px;
+  #foods .foods__container {
+    max-width: 980px;
   }
-  #foods .food__container .food__featured {
-    max-width: 550px;
-    width: 100%;
+  #foods .foods__container .food__featured {
+    width: 550px;
     height: 260px;
     padding-top: 0px;
   }
-  #foods .food__container .food__featured h2 {
+  #foods .foods__container .food__featured h2 {
     margin-top: 100px;
     font-size: 1.8em;
   }
-  #foods .food__container .food__featured p {
+  #foods .foods__container .food__featured p {
     font-size: 0.9em;
   }
-  #foods .food__container .food__box {
+  #foods .foods__container .food__box {
     padding: 110px 0 0 0;
   }
-  #foods .food__container .food__box .food__card {
-    margin: 0 auto;
-    display: block;
+  #foods .foods__container .food__box .food__cards {
+    width: 302px;
+    height: 420px;
+  }
+  #foods .foods__container .food__box .food__cards:hover .btn__order {
+    top: 200px;
+  }
+  #foods .foods__container .food__box .food__cards .btn__order {
+    top: 150px;
+    left: 70px;
+  }
+  #foods .foods__container .food__box .food__cards .img__ravioli {
+    width: 302px;
+    height: 320px;
+  }
+  #foods .foods__container .food__box .food__cards .img__pasta {
+    width: 302px;
+    height: 320px;
+  }
+  #foods .foods__container .food__box .food__cards .img__gelato {
+    width: 302px;
+    height: 320px;
+  }
+  #foods .foods__container .food__box .food__cards h3 {
+    font-size: 1.4em;
+    margin-top: 25px;
+  }
+  #foods .foods__container .food__box .food__cards p {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  #foods .foods__container .food__box .card-position {
+    margin-top: 40px;
+  }
+  #foods .foods__container .food__box .card-distance {
+    margin: 0 30px 0 30px;
   }
 
   #menu {
-    max-width: 950px;
-    min-width: 920px;
+    max-width: 980px;
   }
   #menu .menu__container {
-    max-width: 930px;
-    min-width: 900px;
+    max-width: 980px;
     height: auto;
   }
   #menu .menu__container .menu__header h2 {
@@ -1743,8 +1769,7 @@
   }
   #menu .menu__container .menu__tabs {
     margin-top: 200px;
-    max-width: 950px;
-    min-width: 920px;
+    width: 975px;
   }
   #menu .menu__container .manu__header-list {
     padding-bottom: 0px;
@@ -1758,7 +1783,7 @@
   #menu .menu__container .container__tabs .menu__box .cost {
     font-size: 1em;
   }
-  #menu .menu__container .container__tabs .menu__box .product-name {
+  #menu .menu__container .container__tabs .menu__box .productName {
     font-size: 1.4em;
   }
 
@@ -1785,12 +1810,10 @@
   }
 
   #slider {
-    max-width: 950px;
-    min-width: 920px;
+    max-width: 980px;
   }
   #slider .slider__container {
-    max-width: 930px;
-    min-width: 900px;
+    max-width: 980px;
   }
   #slider .slider__container .slider__header {
     height: 60px;
@@ -1802,14 +1825,11 @@
   #slider .slider__container .slider__viewport {
     margin-top: 200px;
   }
-  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news {
+  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news {
     width: 350px;
   }
-  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news h4 {
+  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news h4 {
     font-size: 1.3em;
-  }
-  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more {
-    margin-top: 0.1rem;
   }
 
   #footer {
@@ -1829,7 +1849,19 @@
     max-height: 59%;
   }
   #content .section:nth-child(3) {
-    min-height: 110%;
+    max-height: 100%;
+  }
+  #content .section:nth-child(4) {
+    max-height: 145%;
+  }
+  #content .section:nth-child(5) {
+    min-height: 120%;
+  }
+  #content .section:nth-child(7) {
+    max-height: 68%;
+  }
+  #content .section:nth-child(8) {
+    max-height: 55%;
   }
 
   #greeting {
@@ -1847,40 +1879,35 @@
   }
 
   #availability {
-    max-width: 737px;
-    min-width: 707px;
+    max-width: 767px;
   }
   #availability .availability__container {
-    max-width: 707px;
-    min-width: 697px;
-    min-height: 147px;
-    align-items: center;
-    display: flex;
-    padding: 35px 15px 35px 15px;
+    max-width: 737px;
+    max-height: 140px;
+  }
+  #availability .availability__container .availability__box {
+    position: absolute;
   }
   #availability .availability__container .availability__box .availability__box-item {
-    margin-right: 7.5px;
-    padding-right: 7.5px;
+    margin-right: 16px;
   }
   #availability .availability__container .availability__box .no-margin-right {
     margin-right: 0px;
   }
   #availability .availability__container .availability__box .check-btn {
     position: absolute;
-    bottom: -40px;
+    bottom: -50px;
     left: -13px;
     float: none;
     display: inline;
   }
 
   #employee {
-    max-width: 737px;
-    min-width: 737px;
+    max-width: 767px;
   }
   #employee .employee__container {
     margin-top: 50px;
-    max-width: 737px;
-    min-width: 697px;
+    max-width: 767px;
     float: left;
   }
   #employee .employee__container .employee__background {
@@ -1893,45 +1920,25 @@
     float: left;
   }
 
-  #foods {
-    max-width: 737px;
-    min-width: 737px;
-  }
-  #foods .food__container {
-    max-width: 737px;
-    min-width: 697px;
-  }
-  #foods .food__container .food__featured {
-    max-width: 550px;
-    width: 100%;
-    height: 260px;
-    padding-top: 0px;
-  }
-
   #menu {
-    max-width: 737px;
-    min-width: 737px;
+    max-width: 767px;
   }
   #menu .menu__container {
-    max-width: 737px;
-    min-width: 697px;
+    width: 767px;
   }
   #menu .menu__container .menu__tabs {
     margin-top: 175px;
-    max-width: 737px;
-    min-width: 697px;
+    width: 767px;
   }
   #menu .menu__container .container__tabs .menu__box {
     width: 90%;
   }
 
   #slider {
-    max-width: 737px;
-    min-width: 737px;
+    max-width: 767px;
   }
   #slider .slider__container {
-    max-width: 737px;
-    min-width: 697px;
+    width: 767px;
   }
   #slider .slider__viewport {
     margin-top: 180px;
@@ -2090,30 +2097,28 @@
 }
 @media (max-width: 767px) {
   #content .section:nth-child(1) {
-    max-height: 50%;
+    max-height: 39%;
   }
   #content .section:nth-child(3) {
-    min-height: 122%;
+    min-height: 105%;
   }
   #content .section:nth-child(4) {
-    min-height: 205%;
-  }
-  #content .section:nth-child(5) {
-    min-height: 135%;
+    min-height: 180%;
   }
   #content .section:nth-child(7) {
-    max-height: 63%;
+    max-height: 58%;
   }
   #content .section:nth-child(8) {
-    max-height: 67%;
+    max-height: 60%;
   }
 
   #greeting {
-    height: 65vh;
+    height: 45vh;
   }
   #greeting .greeting__header {
     top: 100px;
-    width: 100%;
+    max-width: 520px;
+    min-width: 480px;
   }
   #greeting .greeting__header h1 {
     margin-bottom: 30px;
@@ -2128,23 +2133,24 @@
   }
 
   #availability {
-    max-width: 480px;
+    max-width: 520px;
     min-width: 480px;
   }
   #availability .availability__container {
-    top: -80px;
-    max-width: 470px;
-    min-width: 470px;
-    padding: 0px 0px 0px 0px;
-    min-height: 290px;
-    margin: 0 auto;
+    top: -55px;
+    max-width: 480px;
+    min-width: 430px;
+    padding: 8px 10px 25px 10px;
+    min-height: 230px;
   }
   #availability .availability__container .availability__box {
-    max-width: 434px;
-    min-width: 434px;
-    justify-content: center;
+    max-width: 470px;
+    min-width: 430px;
+    justify-content: normal;
     display: block;
+    position: absolute;
     margin: 0 auto;
+    padding-left: 10px;
   }
   #availability .availability__container .availability__box .availability__box-item {
     padding-right: 13.5px;
@@ -2158,33 +2164,33 @@
     margin-top: 5px;
     margin-bottom: 0px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-name {
+  #availability .availability__container .availability__box .availability__box-item .inName {
     max-width: 205px;
     width: 100%;
-    min-width: 155px;
+    min-width: 195px;
     height: 30px;
     font-size: 1.2em;
     margin-top: 5px;
     padding-bottom: 5px;
     display: flex;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-phone {
+  #availability .availability__container .availability__box .availability__box-item .inPhone {
     max-width: 205px;
     width: 100%;
-    min-width: 155px;
+    min-width: 195px;
     height: 30px;
     font-size: 1.2em;
     margin-top: 5px;
     padding-bottom: 5px;
     display: flex;
   }
-  #availability .availability__container .availability__box .availability__box-item .message-input {
+  #availability .availability__container .availability__box .availability__box-item .message__input {
     margin-top: -2px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-date {
+  #availability .availability__container .availability__box .availability__box-item .inDate {
     max-width: 205px;
     width: 100%;
-    min-width: 155px;
+    min-width: 195px;
     height: 30px;
     font-size: 1.2em;
     margin-top: 5px;
@@ -2198,8 +2204,7 @@
     font-size: 1.3em;
     margin-top: 5px;
     height: 30px;
-    max-width: 225px;
-    min-width: 155px;
+    min-width: 225px;
     width: 100%;
     border-color: white;
     border-left: 1px;
@@ -2210,7 +2215,7 @@
   }
   #availability .availability__container .availability__box .availability__box-item .fa {
     top: 0px;
-    right: -100px !important;
+    right: -125px !important;
     width: 12px;
     height: 12px;
   }
@@ -2219,122 +2224,112 @@
   }
   #availability .availability__container .availability__box .check-btn {
     position: absolute;
-    left: 0px;
+    left: 9px;
     width: 125px;
     height: 50px;
-    display: block;
     font-size: 0.8em;
     line-height: 50px;
-    margin: 0;
-  }
-  #availability .availability__container .availability__box .no-margin-right {
-    margin-right: 0px;
-  }
-  #availability .availability__container .availability__box .no-margin-left {
-    margin-left: 0px;
-  }
-  #availability .availability__container .availability__box .no-padding-left {
-    padding-left: 0px;
-  }
-  #availability .availability__container .availability__box .no-padding-right {
-    padding-right: 0px;
+    margin: 0 auto;
   }
 
   #employee {
-    max-width: 480px;
+    max-width: 520px;
     min-width: 480px;
   }
   #employee .employee__container {
     margin-top: 120px;
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 514px;
+    min-width: 480px;
   }
   #employee .employee__container .employee__background {
-    max-width: 470px;
+    max-width: 514px;
     width: 100%;
-    min-width: 470px;
+    min-width: 480px;
     margin: 0 auto;
   }
   #employee .employee__container .employee__background .employee__img {
-    width: 338px;
+    width: 366px;
     height: 420px;
     bottom: 0px;
   }
   #employee .employee__container .employee__about-box {
-    max-width: 470px;
-    min-width: 470px;
+    width: 505px;
   }
   #employee .employee__container .employee__about-box h2 {
     margin-top: 20px;
   }
 
   #foods {
-    max-width: 480px;
+    max-width: 520px;
     min-width: 480px;
   }
-  #foods .food__container {
-    max-width: 470px;
-    min-width: 470px;
+  #foods .foods__container {
+    max-width: 505px;
+    min-width: 465px;
   }
-  #foods .food__container .food__featured {
+  #foods .foods__container .food__featured {
     top: 0px;
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 505px;
+    min-width: 465px;
     height: 200px;
     padding-top: 0px;
     margin: 0px 0px 0px 0px;
   }
-  #foods .food__container .food__featured h2 {
+  #foods .foods__container .food__featured h2 {
     margin-top: 40px;
     font-size: 1.8em;
     margin-bottom: 0px;
   }
-  #foods .food__container .food__featured p {
+  #foods .foods__container .food__featured p {
     font-size: 0.9em;
     margin: 30px 0px 0px 0px;
   }
-  #foods .food__container .food__box {
-    width: 470px;
+  #foods .foods__container .food__box {
+    width: 480px;
     padding: 0px;
   }
-  #foods .food__container .food__box .food__card {
+  #foods .foods__container .food__box .food__card {
     padding: 0;
     padding-bottom: 80px;
     height: 420px;
   }
-  #foods .food__container .food__box .food__card:hover .btn__order {
+  #foods .foods__container .food__box .food__card:hover .btn__order {
     top: 200px;
   }
-  #foods .food__container .food__box .food__card .btn__order {
+  #foods .foods__container .food__box .food__card .btn__order {
     top: 150px;
     left: 105px;
   }
-  #foods .food__container .food__box .food__card h3 {
+  #foods .foods__container .food__box .food__card h3 {
     margin-top: 10px;
     font-size: 1.4em;
     margin-bottom: 10px;
-    line-height: 50px;
   }
-  #foods .food__container .food__box .food__card p {
+  #foods .foods__container .food__box .food__card p {
     font-size: 1.1em;
     font-weight: bold;
-    line-height: 20px;
+  }
+  #foods .foods__container .food__box .card-distance {
+    margin: 0 auto;
+  }
+  #foods .foods__container .food__box .card-position__480 {
+    margin: 0 auto;
   }
 
   #menu {
-    max-width: 480px;
+    max-width: 520px;
     min-width: 480px;
     padding-top: 0px;
   }
   #menu .menu__container {
     position: relative;
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 520px;
+    min-width: 480px;
   }
   #menu .menu__container .menu__header {
     position: relative;
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 520px;
+    min-width: 480px;
     height: 100px;
   }
   #menu .menu__container .menu__header h2 {
@@ -2344,8 +2339,8 @@
   }
   #menu .menu__container .menu__tabs {
     margin-top: 0px;
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 520px;
+    min-width: 480px;
     height: 350px;
   }
   #menu .menu__container .menu__tabs .menu__header-list {
@@ -2374,12 +2369,12 @@
     position: relative;
     display: block;
   }
-  #gallery #gallary__top .gallary__columns {
+  #gallery #gallary__top .top__columns {
     position: absolute;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  #gallery #gallary__top .gallary__columns .gallary__item {
+  #gallery #gallary__top .top__columns .top__item {
     width: 100%;
     height: 33.3%;
   }
@@ -2388,29 +2383,29 @@
     position: relative;
     display: block;
   }
-  #gallery #gallary__bottom .gallary__columns {
+  #gallery #gallary__bottom .bottom__columns {
     position: absolute;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  #gallery #gallary__bottom .gallary__columns .gallary__item {
+  #gallery #gallary__bottom .bottom__columns .bottom__item {
     width: 100%;
     height: 50%;
   }
 
   #slider {
-    max-width: 480px;
+    max-width: 520px;
     min-width: 480px;
   }
   #slider .slider__container {
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 520px;
+    min-width: 480px;
   }
   #slider .slider__container .slider__header {
     margin-top: 0;
     top: -15px;
-    max-width: 470px;
-    min-width: 470px;
+    max-width: 520px;
+    min-width: 480px;
   }
   #slider .slider__container .slider__header h2 {
     position: relative;
@@ -2424,10 +2419,10 @@
     height: 450px;
     margin-bottom: 40px;
   }
-  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news h4 {
+  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news h4 {
     font-size: 1.3em;
   }
-  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .slide__box-news .read-more {
+  #slider .slider__container .slider__viewport .slider__wrapper .slide .slide__box .box__news .read__more {
     position: absolute;
     bottom: -10px;
   }
@@ -2466,21 +2461,25 @@
     max-height: 36%;
   }
   #content .section:nth-child(3) {
-    min-height: 125%;
+    min-height: 115%;
   }
   #content .section:nth-child(4) {
-    min-height: 198%;
+    max-height: 180%;
   }
   #content .section:nth-child(5) {
-    min-height: 130%;
+    min-height: 125%;
+  }
+  #content .section:nth-child(7) {
+    max-height: 58%;
   }
   #content .section:nth-child(8) {
-    max-height: 75%;
+    max-height: 62%;
   }
 
   #greeting {
     margin-top: -10px;
     padding: 70px 0 0 0;
+    height: 35vh;
     max-width: 479px;
     min-width: 320px;
   }
@@ -2518,15 +2517,16 @@
     padding: 0;
   }
   #availability .availability__container {
-    top: -50px;
-    max-width: 290px;
-    min-width: 280px;
+    top: -60px;
+    max-width: 399px;
+    min-width: 309px;
     padding: 15px 15px 15px 15px;
     min-height: 375px;
     position: relative;
+    width: 100%;
   }
   #availability .availability__container .availability__box {
-    max-width: 280px;
+    max-width: 389px;
     min-width: 270px;
     position: relative;
     height: 100%;
@@ -2543,18 +2543,18 @@
     position: relative;
     min-height: 60px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-name {
+  #availability .availability__container .availability__box .availability__box-item .inName {
     width: 100%;
     display: block;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-phone {
+  #availability .availability__container .availability__box .availability__box-item .inPhone {
     width: 100%;
     display: block;
   }
-  #availability .availability__container .availability__box .availability__box-item .message-input {
+  #availability .availability__container .availability__box .availability__box-item .message__input {
     margin-top: -2px;
   }
-  #availability .availability__container .availability__box .availability__box-item .in-date {
+  #availability .availability__container .availability__box .availability__box-item .inDate {
     margin: 0;
     width: 100%;
   }
@@ -2564,7 +2564,7 @@
     height: 17px;
   }
   #availability .availability__container .availability__box .availability__box-item .select-list {
-    min-width: 280px;
+    min-width: 390px;
   }
   #availability .availability__container .availability__box .availability__box-item .fa {
     position: relative;
@@ -2572,7 +2572,7 @@
   }
   #availability .availability__container .availability__box .check-btn {
     position: absolute;
-    max-width: 240px;
+    max-width: 349px;
     min-width: 230px;
     width: 100%;
     bottom: 0px;
@@ -2590,20 +2590,24 @@
     margin-top: 250px;
     float: left;
     display: block;
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
     padding: 0;
   }
   #employee .employee__container .employee__background {
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 309px;
+    max-height: 290px;
+    height: 100%;
+    display: block;
+    position: relative;
   }
   #employee .employee__container .employee__background .employee__img {
-    max-width: 174px;
+    width: 291px;
     bottom: -88px;
   }
   #employee .employee__container .employee__about-box {
-    top: -120px;
+    top: 30px;
     max-width: 429px;
     min-width: 309px;
     width: 100%;
@@ -2617,53 +2621,56 @@
     min-width: 320px;
     padding: 0;
   }
-  #foods .food__container {
-    max-width: 320px;
-    min-width: 300px;
+  #foods .foods__container {
+    max-width: 429px;
+    min-width: 320px;
   }
-  #foods .food__container .food__featured {
-    max-width: 320px;
-    min-width: 300px;
+  #foods .foods__container .food__featured {
+    max-width: 429px;
+    min-width: 320px;
     top: 50px;
     position: absolute;
   }
-  #foods .food__container .food__featured h2 {
+  #foods .foods__container .food__featured h2 {
     margin-top: 0px;
     font-size: 1.8em;
     position: relative;
   }
-  #foods .food__container .food__featured p {
+  #foods .foods__container .food__featured p {
     font-size: 0.9em;
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
     text-align-last: center;
     text-align: justify;
   }
-  #foods .food__container .food__box {
-    max-width: 320px;
-    min-width: 300px;
+  #foods .foods__container .food__box {
+    max-width: 429px;
+    min-width: 320px;
+    padding: 0px 0 0 0;
+    margin: 0;
+    justify-content: normal;
   }
-  #foods .food__container .food__box .food__card {
-    max-width: 320px;
-    min-width: 300px;
+  #foods .foods__container .food__box .food__card {
+    max-width: 429px;
+    min-width: 320px;
   }
-  #foods .food__container .food__box .food__card .img__ravioli {
-    max-width: 320px;
-    min-width: 300px;
-    height: 320px;
+  #foods .foods__container .food__box .food__card .img__ravioli {
+    width: 370px;
+    height: 390px;
   }
-  #foods .food__container .food__box .food__card .img__pasta {
-    max-width: 320px;
-    min-width: 300px;
-    height: 320px;
+  #foods .foods__container .food__box .food__card .img__pasta {
+    width: 370px;
+    height: 390px;
   }
-  #foods .food__container .food__box .food__card .img__gelato {
-    max-width: 320px;
-    min-width: 300px;
-    height: 320px;
+  #foods .foods__container .food__box .food__card .img__gelato {
+    width: 370px;
+    height: 390px;
   }
-  #foods .food__container .food__box .food__card p {
+  #foods .foods__container .food__box .food__card p {
     font-size: 1.2em;
+  }
+  #foods .foods__container .food__box .card-distance {
+    margin: 0 0px 0 0px;
   }
 
   #menu {
@@ -2673,23 +2680,23 @@
     padding: 0;
   }
   #menu .menu__container {
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
   }
   #menu .menu__container h2 {
     font-size: 1.8em;
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
   }
   #menu .menu__container .menu__tabs {
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
   }
   #menu .menu__container .container__tabs {
-    margin-top: -230px;
-    max-width: 320px;
-    min-width: 300px;
-    min-height: 850px;
+    margin-top: -139px;
+    max-width: 429px;
+    min-width: 320px;
+    min-height: 160px;
   }
 
   #slider {
@@ -2698,26 +2705,16 @@
     padding: 0;
   }
   #slider .slider__container {
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
   }
   #slider .slider__container .slider__header {
     margin-top: 0;
-    max-width: 320px;
-    min-width: 300px;
+    max-width: 429px;
+    min-width: 320px;
   }
   #slider .slider__container .slider__viewport {
     margin-top: 140px;
-  }
-  #slider .slider__container .slider__viewport .nav__btns .btn-slide {
-    position: relative;
-    display: inline-block;
-    list-style: none;
-    width: 13px;
-    height: 13px;
-    background-color: #c4c4c4;
-    border-radius: 50%;
-    margin: 0px 10px;
   }
 
   #footer .footer__container p {
@@ -2749,17 +2746,17 @@
   }
 }
 @media (max-width: 320px) {
-  #content .section:nth-child(1) {
-    max-height: 40%;
-  }
   #content .section:nth-child(3) {
     max-height: 113%;
   }
   #content .section:nth-child(4) {
-    min-height: 171%;
+    min-height: 152%;
   }
   #content .section:nth-child(7) {
-    max-height: 65%;
+    max-height: 58%;
+  }
+  #content .section:nth-child(8) {
+    max-height: 70%;
   }
 
   #greeting {
@@ -2814,7 +2811,6 @@
     left: 10%;
   }
   #employee .employee__container .employee__about-box {
-    top: 0;
     max-width: 280px;
     min-width: 250px;
   }
@@ -2822,45 +2818,46 @@
   #foods {
     max-width: 319px;
     min-width: 280px;
+    border: 1px solid red;
   }
-  #foods .food__container {
+  #foods .foods__container {
     max-width: 280px;
     min-width: 250px;
   }
-  #foods .food__container .food__featured {
+  #foods .foods__container .food__featured {
     margin-top: 0px;
     max-width: 280px;
     min-width: 250px;
   }
-  #foods .food__container .food__featured p {
+  #foods .foods__container .food__featured p {
     max-width: 280px;
     min-width: 250px;
   }
-  #foods .food__container .food__box {
+  #foods .foods__container .food__box {
     margin-top: 30px;
     max-width: 280px;
     min-width: 250px;
   }
-  #foods .food__container .food__box .food__card {
+  #foods .foods__container .food__box .food__card {
     max-width: 280px;
     min-width: 250px;
     max-height: 320px;
   }
-  #foods .food__container .food__box .food__card .img__ravioli {
+  #foods .foods__container .food__box .food__card .img__ravioli {
     max-width: 280px;
     min-width: 250px;
     max-height: 290px;
     min-height: 260px;
     background-size: cover;
   }
-  #foods .food__container .food__box .food__card .img__pasta {
+  #foods .foods__container .food__box .food__card .img__pasta {
     max-width: 280px;
     min-width: 250px;
     max-height: 290px;
     min-height: 260px;
     background-size: cover;
   }
-  #foods .food__container .food__box .food__card .img__gelato {
+  #foods .foods__container .food__box .food__card .img__gelato {
     width: 100%;
     max-width: 280px;
     min-width: 250px;
@@ -2868,11 +2865,11 @@
     min-height: 260px;
     background-size: cover;
   }
-  #foods .food__container .food__box .food__card .btn__order {
+  #foods .foods__container .food__box .food__card .btn__order {
     top: 150px;
     left: 60px;
   }
-  #foods .food__container .food__box .card-distance {
+  #foods .foods__container .food__box .card-distance {
     margin: 0;
   }
 
@@ -2916,7 +2913,7 @@
   #slider .slider__container .slider__viewport {
     margin-top: 140px;
   }
-  #slider .slider__container .slider__viewport .nav__btns .btn-slide {
+  #slider .slider__container .slider__viewport .nav__btns .nav__btn_slide {
     margin: 0px 5px;
   }
 

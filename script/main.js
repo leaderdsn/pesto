@@ -270,7 +270,7 @@ $('.select-list li').click(function() {
 
 /* Убирает ввозможность ввода букв */
 function inPhoneHandler() {
-    let input = document.querySelector('input.inPhone');
+    let input = document.querySelector('input.in-phone');
     input.value = input.value.replace(/[^\+\d]/g, '');
 }
 
@@ -412,7 +412,7 @@ function ourMenuBlocksGenerator(stock, ident) { // первый параметр
         cost.text(stock[i].cost);
 
         let productName = $('<h4>');
-        productName.addClass('productName');
+        productName.addClass('product-name');
         productName.text(stock[i].productName);
 
         let description = $('<p>');
@@ -773,11 +773,11 @@ var navBtnId; //текущий nav__btn_slide
 var translateWidth = 0; //велечина перемещения слайда
 let sliderWrap = document.querySelector('.slider__wrapper');
 let navBtns = document.querySelector('.nav__btns');
-let navBtnSlide = document.querySelector('.nav__btn_slide');
+let navBtnSlide = document.querySelector('.btn-slide');
 let switchInterval = setInterval(showSlides, slideInterval); //запуск автоматического перемещения слайда
 function moveTheSlide() {
 
-    $('.nav__btn_slide').click(function() {
+    $('.btn-slide').click(function() {
         navBtnId = $(this).index();
         currentSlide(navBtnId);
         clearInterval(switchInterval);
@@ -891,16 +891,16 @@ function clearSliderContent(slCont, btnCont) {
 /* Создание новостной колонки */
 function createBoxNews(index, slideBoxElem) {
     let boxNewsElem = document.createElement('div');
-    boxNewsElem.classList.add('box__news');
+    boxNewsElem.classList.add('slide__box-news');
 
     let newsDateElem = document.createElement('div');
-    newsDateElem.classList.add('news__date');
+    newsDateElem.classList.add('slide__box-date');
     let a1Elem = document.createElement('a');
     let h4Elem = document.createElement('h4');
     let a2Elem = document.createElement('a');
     let pElem = document.createElement('p');
     let linkElem = document.createElement('div');
-    linkElem.classList.add('read__more');
+    linkElem.classList.add('read-more');
     let a3Elem = document.createElement('a');
     let arrowElem = document.createElement('span');
     arrowElem.classList.add('arrow-right')
@@ -924,7 +924,7 @@ function createBoxNews(index, slideBoxElem) {
 
 function createNavBtn(elem) {
     let navBtnSlide = document.createElement('li');
-    navBtnSlide.classList.add('nav__btn_slide');
+    navBtnSlide.classList.add('btn-slide');
     navBtnSlide.setAttribute('id', elem);
 
     navBtns.appendChild(navBtnSlide);
@@ -942,13 +942,13 @@ function showSlides(n) {
     if (n == undefined) {
         n = slideNow;
     }
-    $('.nav__btn_slide').css({
+    $('.btn-slide').css({
         'background-color': '#c4c4c4', //white
         'transition': '0.5s'
     });
 
 
-    $('.nav__btn_slide').each(function(index, elem) {
+    $('.btn-slide').each(function(index, elem) {
         if (index == n) {
             $(this).css({
                 'background-color': '#409c4f', //green

@@ -5,21 +5,20 @@
             &:nth-child(3)//employee
                 max-height: 65%
             &:nth-child(4)//foods
-                min-height: 145%
+                min-height: 220%
             &:nth-child(5)//menu
-                min-height: 125%
+                min-height: 140%
             &:nth-child(7)//slider
-                max-height: 68%
+                max-height: 75%
             &:nth-child(8)//footer
                 max-height: 55%
     
     #greeting
-        #background__anim
-            .background__anim-rotate  
+        #greeting__background-anim
+            .greeting__background-rotate  
                 animation-duration: 0s
                 animation-name: none
         .greeting__header
-            width: 660px
             h1
                 font-size: 2.9em
                 margin-bottom: 35px
@@ -29,11 +28,13 @@
                 left: 300px
 
     #availability
-        max-width: 980px
+        max-width: 950px
+        min-width: 920px
         .availability__container 
             top: -75px
-            max-width: 950px
-            padding: 35px 17px 35px 17px
+            max-width: 900px
+            min-width: 890px
+            padding: 35px 15px 35px 15px
             .availability__box
                 .availability__box-item
                     padding-right: 13.5px 
@@ -44,21 +45,21 @@
                         font-size: 1.1em
                         margin-top: 5px
                         margin-bottom: 0px
-                    .inName
+                    .in-name
                         width: 180px
                         height: 30px
                         font-size: 1.2em
                         margin-top: 5px
                         padding-bottom: 5px
-                    .inPhone
+                    .in-phone
                         width: 210px
                         height: 30px
                         font-size: 1.2em
                         margin-top: 5px
                         padding-bottom: 5px
-                    .message__input
+                    .message-input
                         margin-top: -2px
-                    .inDate
+                    .in-date
                         width: 140px
                         height: 30px
                         font-size: 1.2em
@@ -86,9 +87,11 @@
                     line-height: 50px
 
     #employee
-        max-width: 980px
+        max-width: 950px
+        min-width: 920px
         .employee__container
-            max-width: 980px
+            max-width: 930px
+            min-width: 900px
             .employee__background 
                 width: 450px
                 height: 350px
@@ -105,11 +108,14 @@
                     font-size: 0.9em
 
     #foods
-        max-width: 980px
-        .foods__container
-            max-width: 980px
+        max-width: 950px
+        min-width: 920px
+        .food__container
+            max-width: 930px
+            min-width: 900px
             .food__featured
-                width: 550px 
+                max-width: 550px 
+                width: 100%
                 height: 260px
                 padding-top: 0px
                 h2
@@ -119,45 +125,24 @@
                     font-size: 0.9em
             .food__box
                 padding: 110px 0 0 0
-                .food__cards
-                    width: 302px
-                    height: 420px
-                    &:hover .btn__order
-                        top: 200px
-                    .btn__order
-                        top: 150px
-                        left: 70px
-                    .img__ravioli 
-                        width: 302px
-                        height: 320px 
-                    .img__pasta
-                        width: 302px
-                        height: 320px
-                    .img__gelato
-                        width: 302px
-                        height: 320px
-                    h3
-                        font-size: 1.4em
-                        margin-top: 25px
-                    p
-                        font-size: 1.1em
-                        margin-top: 10px
-                .card-position 
-                    margin-top: 40px
-                .card-distance
-                    margin: 0 30px 0 30px
+                .food__card
+                    margin: 0 auto
+                    display: block
     
     #menu
-        max-width: 980px
+        max-width: 950px
+        min-width: 920px
         .menu__container
-            max-width: 980px
+            max-width: 930px
+            min-width: 900px
             height: auto
             .menu__header
                 h2
                     font-size: 1.8em
             .menu__tabs
                 margin-top: 200px
-                width: 975px
+                max-width: 950px
+                min-width: 920px
             .manu__header-list
                 padding-bottom: 0px
                 margin-bottom: 0px
@@ -169,7 +154,7 @@
                     .menu__box
                         .cost
                             font-size: 1.0em
-                        .productName
+                        .product-name
                             font-size: 1.4em
 
     #gallery
@@ -191,9 +176,11 @@
                 height: 110px
 
     #slider
-        max-width: 980px
+        max-width: 950px
+        min-width: 920px
         .slider__container
-            max-width: 980px
+            max-width: 930px
+            min-width: 900px
             .slider__header 
                 height: 60px
                 line-height: 60px
@@ -204,10 +191,12 @@
                 .slider__wrapper
                     .slide
                         .slide__box
-                            .box__news
+                            .slide__box-news
                                 width: 350px
                                 h4
                                     font-size: 1.3em
+                                .read-more
+                                    margin-top: 0.1rem
 
     #footer
         padding-top: 90px
@@ -225,20 +214,14 @@
             &:nth-child(1)//greeting
                 max-height: 59%
             &:nth-child(3)//employee
-                max-height: 100%
-            &:nth-child(4)//foods
-                max-height: 145%
-            &:nth-child(5)//menu
-                min-height: 120%
-            &:nth-child(7)//slider
-                max-height: 68%
-            &:nth-child(8)//footer
-                max-height: 55%
+                min-height: 110%
 
     #greeting
         height: 65vh
         .greeting__header
             top: 170px
+            // max-width: 767px
+            // width: 100%
             h1
                 margin-bottom: 45px
                 font-size: 2.0em
@@ -246,28 +229,35 @@
                 margin-top: 90px
 
     #availability
-        max-width: 767px
+        max-width: 737px
+        min-width: 707px
         .availability__container 
-            max-width: 737px
-            max-height: 140px
+            max-width: 707px
+            min-width: 697px
+            min-height: 147px
+            align-items: center
+            display: flex
+            padding: 35px 15px 35px 15px
             .availability__box
-                position: absolute
                 .availability__box-item
-                    margin-right: 16px  
+                    margin-right: 7.5px 
+                    padding-right: 7.5px  
                 .no-margin-right
                     margin-right: 0px   
                 .check-btn
                     position: absolute 
-                    bottom: -50px
+                    bottom: -40px
                     left: -13px
                     float: none
                     display: inline
     
     #employee
-        max-width: 767px
+        max-width: 737px
+        min-width: 737px
         .employee__container
             margin-top: 50px
-            max-width: 767px
+            max-width: 737px
+            min-width: 697px
             float: left
             .employee__background 
                 display: block
@@ -276,22 +266,38 @@
                 width: 680px
                 position: relative
                 float: left   
+    #foods
+        max-width: 737px
+        min-width: 737px
+        .food__container
+            max-width: 737px
+            min-width: 697px
+            .food__featured
+                max-width: 550px 
+                width: 100%
+                height: 260px
+                padding-top: 0px
 
     #menu
-        max-width: 767px
+        max-width: 737px
+        min-width: 737px
         .menu__container
-            width: 767px
+            max-width: 737px
+            min-width: 697px
             .menu__tabs
                 margin-top: 175px
-                width: 767px
+                max-width: 737px
+                min-width: 697px
             .container__tabs
                 .menu__box
                     width: 90%
 
     #slider
-        max-width: 767px
+        max-width: 737px
+        min-width: 737px
         .slider__container
-            width: 767px
+            max-width: 737px
+            min-width: 697px
         .slider__viewport
             margin-top: 180px
 
@@ -429,22 +435,23 @@
     #content
         .section 
             &:nth-child(1)//greeting
-                max-height: 39%
+                max-height: 50%
             &:nth-child(3)//employee
-                min-height: 105%
+                min-height: 122%
             &:nth-child(4)//foods
-                min-height: 180%
+                min-height: 205%
+            &:nth-child(5)//menu
+                min-height: 135%
             &:nth-child(7)//slider
-                max-height: 58%
+                max-height: 63%
             &:nth-child(8)//footer
-                max-height: 60%
+                max-height: 67%
 
     #greeting
-        height: 45vh
+        height: 65vh
         .greeting__header
             top: 100px
-            max-width: 520px
-            min-width: 480px
+            width: 100%
             h1
                 margin-bottom: 30px
                 font-size: 2.0em
@@ -454,57 +461,57 @@
             hr 
                 left: 230px
 
-    #availability
-        max-width: 520px
+    #availability 
+        max-width: 480px
         min-width: 480px
         .availability__container 
-            top: -55px
-            max-width: 480px
-            min-width: 430px
-            padding: 8px 10px 25px 10px
-            min-height: 230px
+            top: -80px
+            max-width: 470px
+            min-width: 470px
+            padding: 0px 0px 0px 0px
+            min-height: 290px
+            margin: 0 auto
             .availability__box
-                max-width: 470px
-                min-width: 430px
-                justify-content: normal
+                max-width: 434px
+                min-width: 434px
+                justify-content: center
                 display: block
-                position: absolute
                 margin: 0 auto
-                padding-left: 10px
                 .availability__box-item
                     padding-right: 13.5px 
                     margin-right: 13.5px
                     margin-bottom: 10px  
                     margin-top: 5px  
                     display: flexbox
+                    //background-color: blue
                     label
                         font-size: 1.1em
                         margin-top: 5px
                         margin-bottom: 0px
-                    .inName
+                    .in-name
                         max-width: 205px
                         width: 100%
-                        min-width: 195px
+                        min-width: 155px
                         height: 30px
                         font-size: 1.2em
                         margin-top: 5px
                         padding-bottom: 5px
                         display: flex
-                    .inPhone
+                    .in-phone
                         max-width: 205px
                         width: 100%
-                        min-width: 195px
+                        min-width: 155px
                         height: 30px
                         font-size: 1.2em
                         margin-top: 5px
                         padding-bottom: 5px
                         display: flex
-                    .message__input
+                    .message-input
                         margin-top: -2px
-                    .inDate
+                    .in-date
                         max-width: 205px
                         width: 100%
-                        min-width: 195px
+                        min-width: 155px
                         height: 30px
                         font-size: 1.2em
                         margin-top: 5px
@@ -516,7 +523,8 @@
                         font-size: 1.3em
                         margin-top: 5px
                         height: 30px
-                        min-width: 225px
+                        max-width: 225px
+                        min-width: 155px
                         width: 100%
                         border-color: white
                         border-left: 1px
@@ -526,51 +534,61 @@
                         border-style: solid
                     .fa
                         top: 0px
-                        right: -125px !important
+                        right: -100px !important
                         width: 12px
                         height: 12px
                 .no-right-border767
                     border-right: 0
                 .check-btn
                     position: absolute
-                    left: 9px
+                    left: 0px
                     width: 125px
                     height: 50px
+                    display: block
                     font-size: 0.8em
                     line-height: 50px  
-                    margin: 0 auto
+                    margin: 0
+                .no-margin-right
+                    margin-right: 0px
+                .no-margin-left
+                    margin-left: 0px 
+                .no-padding-left
+                    padding-left: 0px
+                .no-padding-right
+                    padding-right: 0px  
 
     #employee
-        max-width: 520px
+        max-width: 480px
         min-width: 480px
         .employee__container
             margin-top: 120px
-            max-width: 514px
-            min-width: 480px
+            max-width: 470px
+            min-width: 470px
             .employee__background 
-                max-width: 514px
+                max-width: 470px
                 width: 100%
-                min-width: 480px
+                min-width: 470px
                 margin: 0 auto
                 .employee__img
-                    width: 366px
+                    width: 338px
                     height: 420px
                     bottom: 0px
             .employee__about-box
-                width: 505px 
+                max-width: 470px
+                min-width: 470px
                 h2
                     margin-top: 20px
 
     #foods
-        max-width: 520px
+        max-width: 480px
         min-width: 480px
-        .foods__container
-            max-width: 505px
-            min-width: 465px
+        .food__container
+            max-width: 470px
+            min-width: 470px
             .food__featured
                 top: 0px
-                max-width: 505px
-                min-width: 465px
+                max-width: 470px
+                min-width: 470px
                 height: 200px
                 padding-top: 0px
                 margin: 0px 0px 0px 0px
@@ -582,7 +600,7 @@
                     font-size: 0.9em
                     margin: 30px 0px 0px 0px
             .food__box
-                width: 480px
+                width: 470px
                 padding: 0px
                 .food__card
                     padding: 0
@@ -597,26 +615,24 @@
                         margin-top: 10px
                         font-size: 1.4em 
                         margin-bottom: 10px
+                        line-height: 50px
                     p
                         font-size: 1.1em
                         font-weight: bold
-                .card-distance
-                    margin: 0 auto
-                .card-position__480
-                    margin: 0 auto
+                        line-height: 20px
 
     #menu
-        max-width: 520px
+        max-width: 480px
         min-width: 480px
         padding-top: 0px
         .menu__container
             position: relative
-            max-width: 520px
-            min-width: 480px
+            max-width: 470px
+            min-width: 470px
             .menu__header
                 position: relative
-                max-width: 520px
-                min-width: 480px
+                max-width: 470px
+                min-width: 470px
                 height: 100px
                 h2
                     position: relative
@@ -624,8 +640,8 @@
                     font-size: 1.8em
             .menu__tabs
                 margin-top: 0px
-                max-width: 520px
-                min-width: 480px
+                max-width: 470px
+                min-width: 470px
                 height: 350px
                 .menu__header-list
                     justify-content: none
@@ -649,36 +665,36 @@
             padding-bottom: 200% 
             position: relative
             display: block
-            .top__columns
+            .gallary__columns
                 position: absolute
                 flex-wrap: wrap
                 flex-direction: row
-                .top__item
+                .gallary__item
                     width: 100%
                     height: 33.3%
         #gallary__bottom
             padding-bottom: 100% 
             position: relative
             display: block
-            .bottom__columns
-                    position: absolute
-                    flex-wrap: wrap
-                    flex-direction: row
-                    .bottom__item
-                        width: 100%
-                        height: 50%
+            .gallary__columns
+                position: absolute
+                flex-wrap: wrap
+                flex-direction: row
+                .gallary__item
+                    width: 100%
+                    height: 50%
 
     #slider
-        max-width: 520px
+        max-width: 480px
         min-width: 480px
         .slider__container
-            max-width: 520px
-            min-width: 480px
+            max-width: 470px
+            min-width: 470px
             .slider__header
                 margin-top: 0
                 top: -15px
-                max-width: 520px
-                min-width: 480px
+                max-width: 470px
+                min-width: 470px
                 h2 
                     position: relative 
                     font-size: 1.8em
@@ -690,10 +706,10 @@
                     margin-bottom: 40px
                     .slide
                         .slide__box
-                            .box__news
+                            .slide__box-news
                                 h4
                                     font-size: 1.3em
-                                .read__more
+                                .read-more
                                     position: absolute
                                     bottom: -10px
                 .nav__btns
@@ -727,20 +743,17 @@
             &:nth-child(1)//greeting
                 max-height: 36%
             &:nth-child(3)//employee
-                min-height: 115%
-            &:nth-child(4)//foods
-                max-height: 180%
-            &:nth-child(5)//menu
                 min-height: 125%
-            &:nth-child(7)//slider
-                max-height: 58%
+            &:nth-child(4)//foods
+                min-height: 198%
+            &:nth-child(5)//menu
+                min-height: 130%
             &:nth-child(8)//footer
-                max-height: 62%
+                max-height: 75%
 
     #greeting
         margin-top: -10px
         padding: 70px 0 0 0
-        height: 35vh
         max-width: 479px
         min-width: 320px
         .greeting__header
@@ -772,15 +785,14 @@
         min-width: 320px
         padding: 0
         .availability__container 
-            top: -60px
-            max-width: 399px
-            min-width: 309px
+            top: -50px
+            max-width: 290px
+            min-width: 280px
             padding: 15px 15px 15px 15px
             min-height: 375px
             position: relative
-            width: 100%//
             .availability__box
-                max-width: 389px
+                max-width: 280px
                 min-width: 270px
                 position: relative
                 height: 100%
@@ -795,15 +807,15 @@
                     border-bottom: 1px solid #e7e7e7
                     position: relative
                     min-height: 60px
-                    .inName
+                    .in-name
                         width: 100%
                         display: block
-                    .inPhone
+                    .in-phone
                         width: 100%
                         display: block
-                    .message__input
+                    .message-input
                         margin-top: -2px
-                    .inDate
+                    .in-date
                         margin: 0
                         width: 100%
                     .icon-date 
@@ -811,13 +823,13 @@
                         width: 17px
                         height: 17px
                     .select-list
-                        min-width: 390px
+                        min-width: 280px
                     .fa
                         position: relative
                         right: 0px !important
                 .check-btn
                     position: absolute
-                    max-width: 349px
+                    max-width: 240px
                     min-width: 230px
                     width: 100%
                     bottom: 0px
@@ -833,21 +845,17 @@
             margin-top: 250px
             float: left
             display: block
-            max-width: 429px
-            min-width: 320px
+            max-width: 320px
+            min-width: 300px
             padding: 0
             .employee__background 
-                max-width: 429px
-                min-width: 309px
-                max-height: 290px
-                height: 100%
-                display: block
-                position: relative
+                max-width: 320px
+                min-width: 300px
                 .employee__img
-                    width: 291px
+                    max-width: 174px
                     bottom: -88px
             .employee__about-box
-                top: 30px
+                top: -120px
                 max-width: 429px
                 min-width: 309px
                 width: 100%
@@ -859,12 +867,12 @@
         max-width: 479px
         min-width: 320px
         padding: 0
-        .foods__container
-            max-width: 429px
-            min-width: 320px
+        .food__container
+            max-width: 320px
+            min-width: 300px
             .food__featured
-                max-width: 429px
-                min-width: 320px
+                max-width: 320px
+                min-width: 300px
                 top: 50px
                 position: absolute
                 h2
@@ -873,33 +881,30 @@
                     position: relative 
                 p
                     font-size: 0.9em
-                    max-width: 429px
-                    min-width: 320px
+                    max-width: 320px
+                    min-width: 300px
                     text-align-last: center
-                    text-align: justify
-                    
+                    text-align: justify        
             .food__box
-                max-width: 429px
-                min-width: 320px
-                padding: 0px 0 0 0
-                margin: 0
-                justify-content: normal
+                max-width: 320px
+                min-width: 300px
                 .food__card
-                    max-width: 429px
-                    min-width: 320px
+                    max-width: 320px
+                    min-width: 300px
                     .img__ravioli
-                        width: 370px
-                        height: 390px
+                        max-width: 320px
+                        min-width: 300px
+                        height: 320px
                     .img__pasta
-                        width: 370px
-                        height: 390px
+                        max-width: 320px
+                        min-width: 300px
+                        height: 320px
                     .img__gelato
-                        width: 370px
-                        height: 390px
+                        max-width: 320px
+                        min-width: 300px
+                        height: 320px
                     p
                         font-size: 1.20em
-                .card-distance
-                    margin: 0 0px 0 0px
 
     #menu
         max-width: 479px
@@ -907,34 +912,44 @@
         margin: 0 auto
         padding: 0
         .menu__container
-            max-width: 429px
-            min-width: 320px
+            max-width: 320px
+            min-width: 300px
             h2
                 font-size: 1.8em
-                max-width: 429px
-                min-width: 320px
+                max-width: 320px
+                min-width: 300px
             .menu__tabs
-                max-width: 429px
-                min-width: 320px
+                max-width: 320px
+                min-width: 300px
             .container__tabs
-                margin-top: -139px
-                max-width: 429px
-                min-width: 320px
-                min-height: 160px
+                margin-top: -230px
+                max-width: 320px
+                min-width: 300px
+                min-height: 850px
             
     #slider
         max-width: 479px
         min-width: 320px
         padding: 0
         .slider__container
-            max-width: 429px
-            min-width: 320px
+            max-width: 320px
+            min-width: 300px
             .slider__header
                 margin-top: 0
-                max-width: 429px
-                min-width: 320px
+                max-width: 320px
+                min-width: 300px
             .slider__viewport
                 margin-top: 140px
+                .nav__btns
+                    .btn-slide
+                        position: relative
+                        display: inline-block
+                        list-style: none
+                        width: 13px
+                        height: 13px
+                        background-color: #c4c4c4
+                        border-radius: 50%
+                        margin: 0px 10px
 
     #footer
         .footer__container  
@@ -965,14 +980,14 @@
     
     #content
         .section 
+            &:nth-child(1)//greeting
+                max-height: 40%
             &:nth-child(3)//employee
                 max-height: 113%
             &:nth-child(4)//foods
-                min-height: 152%
+                min-height: 171%
             &:nth-child(7)//slider
-                max-height: 58%
-            &:nth-child(8)//footer
-                max-height: 70%
+                max-height: 65%
 
     #greeting
         max-width: 319px
@@ -1016,14 +1031,14 @@
                     max-height: 230px
                     left: 10%
             .employee__about-box
+                top: 0
                 max-width: 280px
                 min-width: 250px
 
     #foods
         max-width: 319px
         min-width: 280px
-        border: 1px solid red
-        .foods__container
+        .food__container
             max-width: 280px
             min-width: 250px
             .food__featured
@@ -1098,7 +1113,7 @@
             .slider__viewport
                 margin-top: 140px
                 .nav__btns
-                    .nav__btn_slide
+                    .btn-slide
                         margin: 0px 5px
 
     #back 
