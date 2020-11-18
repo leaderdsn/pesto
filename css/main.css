@@ -1854,9 +1854,6 @@
     margin-right: 7.5px;
     padding-right: 7.5px;
   }
-  #availability .availability__container .availability__box .no-margin-right {
-    margin-right: 0px;
-  }
   #availability .availability__container .availability__box .check-btn {
     position: absolute;
     bottom: -40px;
@@ -2189,7 +2186,7 @@
     margin-top: 5px;
     height: 30px;
     max-width: 225px;
-    min-width: 155px;
+    min-width: 200px;
     width: 100%;
     border-color: white;
     border-left: 1px;

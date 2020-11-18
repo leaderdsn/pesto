@@ -16,6 +16,7 @@ function readyFunctions() {
     createSlides(); //Создаёт слайдер
     moveTheSlide(); //Анимация слайдера
     itemZoomClick(); //Открывает просмоторщик изображений
+    moveTheSlide();
 
     $('#taskDate').datepicker({ dateFormat: 'dd/mm/y' });
     $('#taskDate').datepicker('setDate', new Date());
@@ -775,8 +776,8 @@ let sliderWrap = document.querySelector('.slider__wrapper');
 let navBtns = document.querySelector('.nav__btns');
 let navBtnSlide = document.querySelector('.btn-slide');
 let switchInterval = setInterval(showSlides, slideInterval); //запуск автоматического перемещения слайда
-function moveTheSlide() {
 
+function moveTheSlide() {
     $('.btn-slide').click(function() {
         navBtnId = $(this).index();
         currentSlide(navBtnId);
