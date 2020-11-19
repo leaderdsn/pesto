@@ -1650,10 +1650,16 @@
     width: 17px;
     height: 17px;
   }
+  #availability .availability__container .availability__box .availability__box-item .people-default {
+    top: 17px;
+    left: 0px;
+    margin-top: 15px;
+    font-size: 1.3em;
+  }
   #availability .availability__container .availability__box .availability__box-item .select-list {
     font-size: 1.3em;
     margin-top: 5px;
-    min-width: 102px;
+    min-width: 100px;
     height: 30px;
   }
   #availability .availability__container .availability__box .availability__box-item .icon-arrow {
@@ -1669,6 +1675,12 @@
     height: 50px;
     font-size: 0.8em;
     line-height: 50px;
+  }
+  #availability .availability__container .availability__box .no-padding-right__for-select {
+    padding-right: 0px;
+  }
+  #availability .availability__container .availability__box .no-margin-right__for-select {
+    margin-right: 0px;
   }
 
   #employee {
